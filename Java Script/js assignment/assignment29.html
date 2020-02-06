@@ -1,0 +1,29 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to check the date
+    Author     : Srikanth S
+    Start Date : 18/11/19
+    End Date   : 18/11/19
+    ***************************************************************************-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     var str="today is 05/10/2018 is 05/12/2018";
+     //spliting string by space
+     var str1=str.split(" ")
+     //regular expression
+     var regexp=/^([0-2][0-9]|[3][0-1])\/(0[0-9]|1[0-2])\/[0-9]{4}/g
+     for(let i=0;i<str1.length;i++){
+         //checking the regular expression
+        if(regexp.test(str1[i])){
+                document.write(str1[i]+"<br>")
+            }
+     }
+    </script>
+</body>
+</html>

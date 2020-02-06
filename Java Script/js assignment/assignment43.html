@@ -1,0 +1,52 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to align paragraphs
+    Author     : Srikanth S
+    Start Date : 26/11/19
+    End Date   : 26/11/19
+    ***************************************************************************-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, hic! Rem totam
+        , cum eaque ratione libero laudantium,
+        soluta commodi labore molestias, praesentium ea consequuntur incidunt tempore odit quis dolorum voluptatem.
+    </p>
+    <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, hic! Rem totam
+    </p>
+    <p class="p3">Lorem ipsum dolor sit amet consectetur</p>
+    <button onclick="change()">click</button>
+    <script>
+        function change() {
+
+            x = document.querySelectorAll(".p1");
+            for (let i = 0; i < x.length; i++) {
+                x[i].style.backgroundColor = "red";
+                x[i].style.textAlign = "center";
+                x[i].style.color = "blue";
+            }
+            x = document.querySelectorAll(".p2");
+
+            for (let i = 0; i < x.length; i++) {
+                x[i].style.backgroundColor = "brown";
+                x[i].style.textAlign = "center";
+                x[i].style.color = "white";
+            }
+            x = document.querySelectorAll(".p3");
+
+            for (let i = 0; i < x.length; i++) {
+                x[i].style.backgroundColor = "green";
+                x[i].style.textAlign = "center";
+                x[i].style.color = "red";
+            }
+        }
+    </script>
+</body>
+
+</html>

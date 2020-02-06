@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        /* buttons design */
+        #gw {
+            width: 30px;
+            font-size: 10px;
+        }
+
+        #gw2 {
+            width: 40px;
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body class="px-3">
+    <!-- html part -->
+    <div class="row mt-3">
+        <div class="w-50 shadow">
+            <h1 class="text-center shadow"><u>To DO List</u></h1>
+            <hr>
+            <form class="pl-3">
+                <div class="form-group">
+                    <label for="t1">Name:</label>
+                    <input type="text" name="" id="t1" class="form-control" placeholder="" aria-describedby="helpId"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="t2">category:</label>
+                    <select class="custom-select" name="category" id="t2">
+                        <option value="study" selected>study</option>
+                        <option value="sports">sports</option>
+                        <option value="food">food</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="t3">priority:</label>
+                    <select class="custom-select" name="priority" id="t3">
+                        <option value="high" selected>high</option>
+                        <option value="low">low</option>
+                        <option value="medium">medium</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="t4">Start date:</label>
+                    <input type="date" name="" id="t4" class="form-control" placeholder="" aria-describedby="helpId"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="t5">End date:</label>
+                    <input type="date" name="" id="t5" class="form-control" placeholder="" aria-describedby="helpId"
+                        required>
+                </div>
+                <button type="submit" class="btn btn-secondary" onclick="valid(this)" id="sub">submit</button>
+                <button type="button" class="btn btn-secondary" id="update" style="display:none">update</button>
+            </form>
+
+        </div>
+        <div class="ml-5" style="width: 45%;">
+            <h1 class="text-center shadow"><u>To Do List Table</u></h1>
+            <hr>
+            <div class="form-group">
+                <input type="text" name="" class="col-12 shadow" id="search" class="form-control" placeholder="search"
+                    aria-describedby="helpId">
+                <button class="btn btn-primary mt-2" onclick="sear()">Search</button>
+                <button class="btn btn-primary mt-2" style="margin-left: 20%" onclick="comp()">completed</button>
+                <button class="btn btn-primary mt-2" onclick="incomp()" style="margin-left: 20%;">incompleted</button>
+            </div>
+            <!-- table to store the data -->
+            <table class="table shadow">
+                <tr>
+                    <th>name</th>
+                    <th>category</th>
+                    <th>priority</th>
+                    <th>start date</th>
+                    <th>end date</th>
+                    <th>completed</th>
+                </tr>
+                <tbody id="tab1"></tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        var tab = document.getElementById("tab1");
+        
+        // to load the table and start to store local storage keys
+        op();
+        function valid() {
+            debugger;
+            var name = document.getElementById("t1").value
+            var cat = document.getElementById("t2").value
+            var pri = document.getElementById("t3").value
+            var sd = document.getElementById("t4").value
+            var ed = document.getElementById("t5").value
+            var det = {
+                "name": name,
+                "category": cat,
+                "Priority": pri,
+                "Startdate": sd,
+                "Enddate": ed
+            };
+            //for getting  unique key
+            var uni = uniq()
+            datevalid(sd, ed, uni)
+        }
+        function uniq() {
+            var date = new Date();
+            var uni = date.getFullYear() + "" + date.getMonth() + "" + date.getDate() + "" + date.getTime();
+            return uni;
+        }
+        //checking for start date is greater than end date
+        function datevalid(sd, ed, uni) {
+            var sdate = (sd.split("-")).join("");
+            var edate = (ed.split("-")).join("");
+            if (sdate > edate) {
+                alert('incorrect format');
+                return false;
+            }
+            else {
+                //if date is correct calls the function
+                obj(uni)
+            }
+        }
+        function obj(uni) {
+            var name = document.getElementById("t1").value
+            var cat = document.getElementById("t2").value
+            var pri = document.getElementById("t3").value
+            var sd = document.getElementById("t4").value
+            var ed = document.getElementById("t5").value
+            //stores in a object
+            var det = {
+                "name": name,
+                "category": cat,
+                "Priority": pri,
+                "Startdate": sd,
+                "Enddate": ed,
+
+            };
+            localStorage.setItem(uni, JSON.stringify(det));
+        }
+
+
+        function op() {
+            var k = Object.keys(localStorage)
+            for (let i = 0; i < k.length; i++) {
+                var get = localStorage.getItem(k[i])
+                res = JSON.parse(get);
+                //inserting row
+                var r = tab.insertRow(-1)
+                r.id = k[i]
+                //inserting columns
+                var c0 = r.insertCell(0)
+                var c1 = r.insertCell(1)
+                var c2 = r.insertCell(2)
+                var c3 = r.insertCell(3)
+                var c4 = r.insertCell(4)
+                var c5 = r.insertCell(5)
+                c0.innerHTML = res.name;
+                c1.innerHTML = res.category;
+                c2.innerHTML = res.Priority;
+                c3.innerHTML = res.Startdate;
+                c4.innerHTML = res.Enddate;
+                //creating a element
+                var c = document.createElement("INPUT")
+                var at = document.createAttribute("type")
+                c.setAttribute("class", "checkboX");
+                at.value = "checkbox"
+                c.setAttributeNode(at)
+                c.checked = res.checkState;
+                c.addEventListener('click', function () {
+                    var btn1 = this.parentNode.childNodes[1]
+                    //when you click on checkbox the edit button will disable
+                    if (this.checked == true) {
+                        btn1.disabled = true;
+                        this.parentNode.parentNode.style.color = "red"
+                    }
+                    else if (this.checked == false) {
+                        btn1.disabled = false
+                        this.parentNode.parentNode.style.color = "black"
+                    }
+                    updatecheck(this.parentNode.parentNode.id, this.checked)
+                })
+                //checkbox will store in local strorage
+                if (c.checked == true) {
+                    c.checkState = true;
+                }
+                if (c.checked == null) {
+                    updatecheck(r.id, false)
+                }
+                //appending to column
+                c5.appendChild(c)
+                //create a edit button
+                var btn = document.createElement("BUTTON")
+                var tex = document.createTextNode("edit")
+                btn.addEventListener('click', edi)
+                btn.appendChild(tex)
+                c5.appendChild(btn)
+                btn.id = "gw";
+                //creating delete button
+                var btn2 = document.createElement("BUTTON")
+                var tex2 = document.createTextNode("delete")
+                btn2.appendChild(tex2)
+                btn2.addEventListener('click', del)
+                c5.appendChild(btn2)
+                btn2.id = "gw2";
+            }
+        }
+        //funtion to update checkbox in local storage
+        function updatecheck(ide, check) {
+            // alert(ide);
+            var a = document.getElementsByClassName("checkboX");
+            data = JSON.parse(localStorage.getItem(ide))
+            // console.log(data)
+            data.checkState = check;
+            // console.log(data.checkState)
+            localStorage.setItem(ide, JSON.stringify(data))
+        }
+        //function to delete the  row
+        function del() {
+            var delet = this.parentNode.parentNode.id;
+            localStorage.removeItem(delet);
+            window.location.reload();
+        }
+        //function to edit the local storage data
+        function edi() {
+            var edit = this.parentNode.parentNode.id;
+            var a = document.getElementById("sub");
+            a.style.display = "none"
+            document.getElementById('update').style.display = 'inline-block';
+            document.getElementById("update").addEventListener('click', upd);
+            //getting values from local storage
+            var ob = JSON.parse(localStorage.getItem(edit));
+            var a1 = document.getElementById("t1").value = ob.name;
+            var a2 = document.getElementById("t2").value = ob.category;
+            var a3 = document.getElementById("t3").value = ob.Priority;
+            var a4 = document.getElementById("t4").value = ob.Startdate;
+            var a5 = document.getElementById("t5").value = ob.Enddate;
+            function editing() {
+                //storing in a object
+                var Obj = {
+                    "name": document.getElementById("t1").value,
+                    "category": document.getElementById("t2").value,
+                    "Priority": document.getElementById("t3").value,
+                    "Startdate": document.getElementById("t4").value,
+                    "Enddate": document.getElementById("t5").value,
+                };
+                return JSON.stringify(Obj);
+            }
+            function upd() {
+                var stor = editing();
+                localStorage.setItem(edit, stor);
+                window.location.reload();
+            }
+        }
+       
+        //function to display the check buttons is true
+        function comp() {
+            op()
+            var a = document.getElementsByClassName("checkboX")
+            for (let i = 0; i < a.length; i++) {
+                var b = a[i].parentNode.parentNode;
+                if (a[i].checkState == true) {
+                    b.style.visibility = "visible";
+                }
+                else {
+                    b.style.display = "none";
+                }
+            }
+        }
+        //function to display check buttons is false
+        function incomp() {
+            op()
+            var a = document.getElementsByClassName("checkboX")
+            for (let i = 0; i < a.length; i++) {
+                var b = a[i].parentNode.parentNode;
+                if (a[i].checkState == true) {
+                    b.style.display = "none";
+                }
+                else {
+                    b.style.visibility = "visible";
+                }
+            }
+        }
+
+        //function for searching the required name 
+        function sear() {
+            var pattern = document.getElementById('search').value;
+            var a = document.getElementsByClassName("checkboX");
+            for (let i = 0; i < a.length; i++) {
+                // console.log(a[i]);
+                var b = a[i].parentNode.parentNode;
+                var c = b.childNodes[0].innerHTML;
+                if (pattern == c) {
+                    b.style.visibility = "visible";
+                }
+                else {
+                    b.style.display = "none";
+                }
+            }
+        }
+
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

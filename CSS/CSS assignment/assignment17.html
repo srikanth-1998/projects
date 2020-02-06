@@ -1,0 +1,280 @@
+<!------------------------------------------------------------------------------------------------------------------
+create the following layout and apply transform
+Description : assignment17
+Author      : Srikanth S
+Start Date  : 28/09/2019
+-------------------------------------------------------------------------------------------------------------------->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WSA-assignment17</title>
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+        }
+
+
+        .first {
+            position: absolute;
+            top: 250px;
+            left: 300px;
+            transform: skewX(13deg) skewY(-20deg) rotateY(37deg) rotateX(45deg);
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        .sd4 {
+            position: absolute;
+            top: 250px;
+            left: 300px;
+            z-index: -4;
+            background-color: rgb(105, 105, 105, 0.3);
+            width: 100px;
+            border-radius: 10px;
+            height: 100px;
+            transform: skewX(13deg) skewY(-20deg) rotateY(37deg) rotateX(45deg);
+        }
+
+        .sd3 {
+            z-index: -3;
+            background-color: rgb(21, 125, 195, 0.2);
+        }
+
+        .sd2 {
+            z-index: -2;
+            background-color: rgb(21, 125, 195, 0.4);
+        }
+
+        .sd1 {
+            z-index: -1;
+            background-color: rgb(21, 125, 195, 0.5);
+        }
+
+        .second {
+            left: 450px;
+            border-radius: 10px;
+        }
+
+        .sd14 {
+            z-index: -4;
+            left: 450px;
+            position: absolute;
+            top: 250px;
+            /* left: 300px; */
+            /* z-index: -4; */
+            background-color: rgb(105, 105, 105, 0.3);
+            width: 100px;
+            border-radius: 10px;
+            height: 100px;
+            transform: skewX(13deg) skewY(-20deg) rotateY(37deg) rotateX(45deg);
+        }
+
+        .sd13 {
+            z-index: -3;
+            background-color: rgb(220, 74, 56, 0.2);
+        }
+
+        .sd12 {
+            z-index: -2;
+            background-color: rgb(220, 74, 56, 0.4);
+        }
+
+        .sd11 {
+            z-index: -1;
+            background-color: rgb(220, 74, 56, 0.5);
+        }
+
+        .third {
+            left: 600px;
+        }
+
+        .sd24 {
+            z-index: -4;
+            left: 600px;
+            position: absolute;
+            top: 250px;
+            /* left: 300px;
+            z-index: -4; */
+            background-color: rgb(105, 105, 105, 0.3);
+            width: 100px;
+            border-radius: 10px;
+            height: 100px;
+            transform: skewX(13deg) skewY(-20deg) rotateY(37deg) rotateX(45deg);
+        }
+
+        .sd23 {
+            z-index: -3;
+            background: rgb(29, 161, 242, 0.2)
+        }
+
+        .sd22 {
+            z-index: -2;
+            background: rgb(29, 161, 242, 0.4)
+        }
+
+        .sd21 {
+            z-index: -1;
+            background: rgb(29, 161, 242, 0.5)
+        }
+
+        .fourth {
+            left: 750px;
+        }
+
+        .sd34 {
+            z-index: -4;
+            left: 750px;
+            position: absolute;
+            top: 250px;
+            /* left: 300px;
+            z-index: -4; */
+            background-color: rgb(105, 105, 105, 0.3);
+            width: 100px;
+            border-radius: 10px;
+            height: 100px;
+            transform: skewX(13deg) skewY(-20deg) rotateY(37deg) rotateX(45deg);
+        }
+
+        .sd33 {
+            z-index: -3;
+            background: rgb(2, 116, 179, 0.2);
+        }
+
+        .sd32 {
+            z-index: -2;
+            background: rgb(2, 116, 179, 0.4);
+        }
+
+        .sd31 {
+            z-index: -1;
+            background: rgb(2, 116, 179, 0.5);
+        }
+
+        .fifth {
+            left: 900px;
+        }
+
+        .sd44 {
+            z-index: -4;
+            left: 900px;
+            position: absolute;
+            top: 250px;
+            /* left: 300px;
+            z-index: -4; */
+            background-color: rgb(105, 105, 105, 0.3);
+            width: 100px;
+            border-radius: 10px;
+            height: 100px;
+            transform: skewX(13deg) skewY(-20deg) rotateY(37deg) rotateX(45deg);
+        }
+
+        .sd43 {
+            z-index: -3;
+            background-color: rgb(233, 109, 109)
+        }
+
+        .sd42 {
+            z-index: -2;
+            background-color: rgb(221, 86, 86)
+        }
+
+        .sd41 {
+            z-index: -1;
+            background-color: brown
+        }
+
+        .first:hover,
+        .second:hover,
+        .third:hover,
+        .fourth:hover,
+        .fifth:hover {
+            transition: 0.6s;
+            transition-timing-function: linear;
+            margin-top: -32px;
+        }
+
+        .first:hover~.sd1,
+        .second:hover~.sd11,
+        .third:hover~.sd21,
+        .fourth:hover~.sd31,
+        .fifth:hover~.sd41 {
+            transition: 0.6s;
+            transition-timing-function: linear;
+            margin-top: -24px;
+        }
+
+        .first:hover~.sd2,
+        .second:hover~.sd12,
+        .third:hover~.sd22,
+        .fourth:hover~.sd32,
+        .fifth:hover~.sd42 {
+            transition: 0.6s;
+            transition-timing-function: linear;
+            margin-top: -16px;
+        }
+
+        .first:hover~.sd3,
+        .second:hover~.sd13,
+        .third:hover~.sd23,
+        .fourth:hover~.sd33,
+        .fifth:hover~.sd43 {
+            transition: 0.6s;
+            transition-timing-function: linear;
+            margin-top: -8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- first img -->
+        <div class="first">
+            <img src="./fb_icon_png_480921.png">
+        </div>
+        <div class="sd4 sd1"></div>
+        <div class="sd4 sd2"></div>
+        <div class="sd4 sd3"></div>
+        <div class="sd4"></div>
+        <!-- second img -->
+        <div class="first second">
+            <img src="./googleplus.png">
+        </div>
+        <div class="sd14 sd11"></div>
+        <div class="sd14 sd12"></div>
+        <div class="sd14 sd13"></div>
+        <div class="sd14"></div>
+        <!-- third img -->
+        <div class="first third">
+            <img src="./twi.jpg">
+        </div>
+        <div class="sd24 sd21"></div>
+        <div class="sd24 sd22"></div>
+        <div class="sd24 sd23"></div>
+        <div class="sd24"></div>
+        <!-- fourth img -->
+        <div class="first fourth">
+            <img src="./linked.png">
+        </div>
+        <div class="sd34 sd31"></div>
+        <div class="sd34 sd32"></div>
+        <div class="sd34 sd33"></div>
+        <div class="sd34"></div>
+        <!-- fifth img -->
+        <div class="first fifth">
+            <img src="./insta1.jpg">
+        </div>
+        <div class="sd44 sd41"></div>
+        <div class="sd44 sd42"></div>
+        <div class="sd44 sd43"></div>
+        <div class="sd44"></div>
+    </div>
+
+
+</body>
+
+</html>

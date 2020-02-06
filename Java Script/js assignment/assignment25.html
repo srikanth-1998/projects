@@ -1,0 +1,34 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to check the given string is palindrome or not
+    Author     : Srikanth S
+    Start Date : 18/11/19
+    End Date   : 18/11/19
+    ***************************************************************************-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var str1=prompt("enter the string");
+       document.write(str1+"<br>")
+      var str3="";
+      //spliting string by each character
+      var str2=str1.split("")
+      for(let i=0;i<str2.length;i++){
+          //reversing a string
+         str3=str2[i]+str3;
+      }
+      //checking original string with reversed string
+      if(str1==str3){
+          document.write("it is a palindrome")
+      }
+      else{
+          document.write("not a palindrome")
+      }
+    </script>
+</body>
+</html>

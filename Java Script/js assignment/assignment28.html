@@ -1,0 +1,33 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to reverse a str using recurrsion
+    Author     : Srikanth S
+    Start Date : 29/11/19
+    End Date   : 29/11/19
+    ***************************************************************************-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        debugger;
+        var str1 = prompt("enter the string")
+        function rev(str) {
+            if (str.length < 1) {
+                //it returns str
+                return str;
+            }
+            return rev(str.substr(1)) + str[0];
+        }
+        //function call
+        document.write(rev(str1))
+
+    </script>
+</body>
+
+</html>

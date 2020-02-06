@@ -1,0 +1,27 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to find gross salary
+    Author     : Srikanth S
+    Start Date : 30/10/19
+    End Date   : 30/10/19
+    ***************************************************************************-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WSA-assignment1</title>
+</head>
+<body>
+    <script>
+       var empname=prompt("enter the employee name");       
+       var empid=prompt("enter the employee id");       
+       var salary=+(prompt("enter the salary"));
+       var ta=salary*15/100;//calculates 15% of salary
+       var da=salary*35/100;//calculates 35% of salary
+       var gross_salary=salary+ta+da;
+       document.write("Employee Name:"+empname+"<br>");
+       document.write("Employee Id:"+empid+"<br>");
+       document.write("the gross salary is "+gross_salary);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to find sum and product of array
+    Author     : Srikanth S
+    Start Date : 8/11/19
+    End Date   : 8/11/19
+    ***************************************************************************-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var size=+(prompt("enter the size"));
+      var arr=[];
+      for(let i=0;i<size;i++){
+          arr[i]=+(prompt("enter the numbers"));
+      }
+          var product=1;
+          var sum=0;
+      for(var i=0;i<size;i++){
+          sum+=arr[i];//adds arr[i] with previous result
+          product*=arr[i];//multiplies arr[i] with previous result
+      }
+      document.write(arr+"<br>")
+      document.write("the sum is "+sum);
+      document.write("<br>the product is: "+product);
+    </script>
+</body>
+</html>

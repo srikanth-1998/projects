@@ -1,0 +1,30 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to create a object
+    Author     : Srikanth S
+    Start Date : 19/11/19
+    End Date   : 19/11/19
+    ***************************************************************************-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //creating object
+     var emp={name:"M S Dhoni",id:"7",Salary:"700000",deptname:"Cricket"};
+     //calling object with key
+     document.write("<br>name: "+emp.name);
+     document.write("<br>id: "+emp.id);
+     document.write("<br>salary: "+emp.Salary);
+     document.write("<br>deptname: "+emp.deptname);
+     //delete is used to delete the key
+     delete emp.deptname;
+     document.write("<br>"+emp.deptname)
+     document.write("<br>the length of object emp is:"+Object.keys(emp).length)
+
+    </script>
+</body>
+</html>

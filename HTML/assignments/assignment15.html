@@ -1,0 +1,97 @@
+<!--create the image using canvas as depicted below
+description:Assignment 15
+author     :Srikanth S
+date       :21-08-2019
+@@@@@@@@@@@@-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WSA-assignment15</title>
+</head>
+
+<body>
+    <canvas id="canvas1" width="700" height="800" style="border:1px solid #d3d3d3;">
+    </canvas>
+    <script>
+        var c = document.getElementById("canvas1");
+        //  c.width=window.innerWidth;
+        //c.height=window.innerHeight;
+        var ctx = c.getContext('2d');
+        //for two top lines
+        ctx.moveTo(280, 120);
+        ctx.lineTo(250, 85);
+        ctx.lineWidth = "10";
+        ctx.strokeStyle = "green";
+        ctx.stroke();
+
+        ctx.moveTo(320, 120);
+        ctx.lineTo(350, 90);
+        ctx.lineWidth = "10";
+        ctx.strokeStyle = "green";
+        ctx.stroke();
+        //for rect
+        ctx.fillStyle = "green";
+        ctx.fillRect(250, 150, 100, 100);
+        ctx.fill();
+        //for rect curves
+        ctx.beginPath();
+        ctx.fillStyle = "green";
+        ctx.arc(265, 250, 15, 0 * Math.PI, 1 * Math.PI);
+        ctx.arc(335, 250, 15, 0 * Math.PI, 1 * Math.PI);
+        ctx.fill();
+        ctx.fillRect(270, 250, 60, 15);
+        //for down rect
+        ctx.fillRect(268, 250, 15, 70);
+        ctx.fillRect(318, 250, 15, 70);
+        //for down curves
+        ctx.beginPath();
+        ctx.fillStyle = "green";
+        ctx.arc(275.8, 320, 7.6, 0, 1 * Math.PI);
+        ctx.arc(325.2, 320, 7.6, 0, 1 * Math.PI);
+        ctx.fill();
+        //for side rects
+        ctx.fillRect(220, 160, 15, 80);
+        ctx.fillRect(365, 160, 15, 80);
+        //for side rects curves
+        ctx.beginPath();
+        ctx.fillStyle = "green";
+        ctx.arc(227.7, 160, 7.6, 1 * Math.PI, 2 * Math.PI);
+        ctx.arc(227.7, 240, 7.6, 0 * Math.PI, 1 * Math.PI);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.fillStyle = "green";
+        ctx.arc(372.2, 160, 7.6, 1 * Math.PI, 2 * Math.PI);
+        ctx.arc(372.2, 240, 7.6, 0 * Math.PI, 1 * Math.PI);
+        ctx.fill();
+
+
+
+        //for a half circle
+        ctx.beginPath();
+        ctx.fillStyle = "green";
+        ctx.arc(300, 140, 50, 1 * Math.PI, 2 * Math.PI);
+        ctx.fill();
+        //for small circles
+        ctx.beginPath();
+        ctx.fillStyle = "white";
+        ctx.arc(280, 120, 5, 0 * Math.PI, 2 * Math.PI);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.fillStyle = "white";
+        ctx.arc(320, 120, 5, 0 * Math.PI, 2 * Math.PI);
+        ctx.fill();
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

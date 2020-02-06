@@ -1,0 +1,45 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to open a new window
+    Author     : Srikanth S
+    Start Date : 4/12/19
+    End Date   : 4/12/19
+    ***************************************************************************-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body onload="myfun()">
+    
+    <img id="pic"  src="./dhoni.jpg" width="300" height="200"><br>
+    <!--button to call the myfun function-->
+    <button onclick="myfun()">click</button>
+    <p id="id1"></p>
+    <p id="id2"></p>
+    <script>
+        var count=0;
+        var x;
+        var name=prompt("enter the name")
+        //simply add the count when we call the function and display it
+        function myfun(){
+        count++;
+        document.cookie=document.getElementById("pic");
+        if(count==1){
+            alert("welcome " +name)
+            document.getElementById("id1").innerHTML="You Visited=> 1th time";
+             x=String(Date());
+        }
+        else{
+            alert("welcome again " +name)
+            document.getElementById("id1").innerHTML="You Visited=>"+count+ "th time";
+        }
+        document.getElementById("id2").innerHTML="LastVistit=>"+x;
+        }
+        
+    </script>
+    <p id="id2"></p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to get number of days in a month
+    Author     : Srikanth S
+    Start Date : 5/11/19
+    End Date   : 5/11/19
+    ***************************************************************************-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var n = prompt("enter a month");
+        if (n == "january" || n == "march" || n == "may" || n == "july" || n == "august" || n == "october" || n == "december") {
+            document.write(n + "month has 31 days");
+        }
+        else if (n == "febrauary") {
+            document.write(n + "month has 28 days");
+        }
+        else if(n=="april"||n=="june"||n=="september"||n=="november"){
+            document.write(n + "month has 30 days");
+        }
+        // enters wrong month
+        else{
+            document.write("enter correct month");
+        }
+    </script>
+</body>
+
+</html>

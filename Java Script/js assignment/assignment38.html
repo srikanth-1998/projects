@@ -1,0 +1,30 @@
+<!-- *****************************************************************************
+    Description: write a javascript program 
+    Author     : Srikanth S
+    Start Date : 21/11/19
+    End Date   : 21/11/19
+    ***************************************************************************-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <img src="./dhoni.jpg" width="30%" onmouseover="dhoni()" id="img1" onmouseout="original()">
+  <script>
+    //onhover the image
+    function dhoni() {
+      document.getElementById("img1").src = "dhoni1.jpg"
+    }
+    //onmouse out
+    function original() {
+      document.getElementById("img1").src = "dhoni.jpg"
+    }
+  </script>
+</body>
+
+</html>

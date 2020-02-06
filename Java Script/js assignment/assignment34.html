@@ -1,0 +1,31 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to create object and add property using protoype
+    Author     : Srikanth S
+    Start Date : 19/11/19
+    End Date   : 19/11/19
+    ***************************************************************************-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     function person(fname,age,mob){
+         this.name=fname;
+         this.age=age;
+         this.mob=mob;
+     }
+     //prototype is used to create a key value
+     person.prototype.lname="Dhoni";
+     var p1=new person("M S","38","7892694017")
+     document.write("<br>firstname= "+p1.name)
+     document.write("<br>lastname= "+p1.lname)
+     document.write("<br>age= "+p1.age)
+     document.write("<br>mob= "+p1.mob)
+    </script>
+</body>
+</html>

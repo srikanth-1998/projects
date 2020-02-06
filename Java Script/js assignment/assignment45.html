@@ -1,0 +1,43 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to open a new window
+    Author     : Srikanth S
+    Start Date : 29/11/19
+    End Date   : 29/11/19
+    ***************************************************************************-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="op()" style="margin-left:40% ;">open</button>
+    <button onclick="re()">resize</button>
+    <button onclick="scr()">scroll</button>
+    <button onclick="mov()">move</button>
+    <script>
+       var win
+        function op(){
+            //opening a window
+         win=window.open("./assignment1.html","BOM","width=400,height=400",true)
+        }
+        function mov(){
+            // moving window
+            win.moveTo(200,400);
+            win.document.write("this is Srikanth Dhoni");
+            win.focus();
+        }
+        function re(){
+            //changing the size
+            win.resizeTo(200,200);
+            win.focus();
+        }
+        function scr(){
+            //to get scroll
+            win.document.body.style.width="150%"
+            win.focus();
+        }
+    </script>
+</body>
+</html>

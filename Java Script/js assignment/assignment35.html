@@ -1,0 +1,37 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to create doctor object
+    Author     : Srikanth S
+    Start Date : 19/11/19
+    End Date   : 19/11/19
+    ***************************************************************************-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function doc(){
+           this.docname="Dhoni";
+           this.expe="14";
+       }
+       //prototype is used to add a key value pair
+       doc.prototype.pname="rishab pant"
+       function nurse(){
+           this.nname="vk";
+           this.nexpe=10;
+       }
+       //assigning doc key values to nurse
+       nurse.prototype=new doc()
+       var dd=new nurse()
+       document.write("<br>docname="+dd.docname)
+       document.write("<br>docexp="+dd.expe)
+       document.write("<br>nursename="+dd.nname)
+       document.write("<br>nurseexp="+dd.nexpe)
+       document.write("<br>patname="+dd.pname)
+    </script>
+</body>
+</html>

@@ -1,0 +1,1004 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bootstrap project</title>
+    <script src="https://kit.fontawesome.com/f8aa197cbc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <style>
+        .line::before {
+            content: "-";
+            display: inline-block;
+            background-color: black;
+            width: 100px;
+            height: 1px
+        }
+
+        .line::after {
+            content: "-";
+            display: inline-block;
+            background-color: black;
+            width: 100px;
+            height: 1px
+        }
+
+        .line2::before {
+            content: "-";
+            display: inline-block;
+            background-color: white;
+            width: 100px;
+            height: 1px
+        }
+
+        .line2::after {
+            content: "-";
+            display: inline-block;
+            background-color: white;
+            width: 100px;
+            height: 1px
+        }
+
+        .map-container {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+        }
+
+        .map-container iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body style="overflow-x: hidden;">
+    <nav class="navbar navbar-dark bg-primary navbar-expand-lg sticky-top">
+        <a class="navbar-brand">
+            <img src="./icon.png" width="50px" height="30px">
+            <img src="./title.png" width="150px" height="20px">
+        </a>
+        <div class="ml-auto">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#features" class="nav-link">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#screenshots" class="nav-link">Screenshots</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#downloads" class="nav-link">Download</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle " id="my-dropdown" data-toggle="dropdown">News</a>
+                    <div class="dropdown-menu" data-target="#my-dropdown">
+                        <a class="dropdowm-item pl-4" href="#news">vhy</a><br>
+                        <a class="dropdowm-item pl-4" href="#news">vhy</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#prices" class="nav-link">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#faq" class="nav-link">fAQ's</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="home" style="background-image: url(./bg.png);">
+        <div class="row">
+            <div class="col-9 py-5">
+                <img src="./title.png" width="90%" height="100px" class="ml-5">
+                <p class="text-center text-white pr-5 py-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Magnam quas voluptatibus
+                    tempore<br> sunt aut repudiandae numquam sapiente necessitatibus, adipisci voluptates fugiat,
+                    omnis<br> totam a amet. Consequuntur dolor assumenda fugit illo.
+                </p>
+                <div class="text-center">
+                    <button class="btn btn-primary">Find More About
+                        Us</button>
+                </div>
+            </div>
+            <div class="col-3">
+                <div id="my-carousel" class="carousel slide mx-auto mt-5" data-ride="carousel" data-interval="1000"
+                    data-pause="hover">
+                    <ol class="carousel-indicators">
+                        <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#my-carousel" data-slide-to="1"></li>
+                        <li data-target="#my-carousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./1-1.png" class="d-block img-fluid" width="100%">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="./1-2.png" class="d-block img-fluid" width="100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./1-3.png" class="d-block img-fluid" width="100%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5 pb-2">
+        <h1 class="text-center">ABOUT APPERLE</h1>
+        <div class="line text-center">
+            <i class="fas fa-heart" style="font-size: 40px;"></i>
+        </div>
+        <p class="text-center pt-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Magnam quas voluptatibus
+            tempore<br> sunt aut repudiandae numquam sapiente necessitatibus, adipisci voluptates fugiat,
+            omnis<br> totam a amet. Consequuntur dolor assumenda fugit illo.
+        </p>
+        <div class="row pt-5">
+            <div class="col-4 ">
+                <div class="text-center bg-primary rounded-circle w-25 mx-auto">
+                    <i class="fas fa-arrows-alt text-white" style="font-size: 60px;"></i>
+                </div>
+                <h3 class="text-center pt-4">UNIQUE LAYOUT</h3>
+                <p class="text-center pt-3">Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Aperiam dolorem
+                    <br> odit id, voluptatum officia
+                </p>
+            </div>
+            <div class="col-4 ">
+                <div class="text-center bg-primary rounded-circle w-25 mx-auto">
+                    <i class="fas fa-pencil-alt text-white" style="font-size: 60px;"></i>
+                </div>
+                <h3 class="text-center pt-4">WELL DOCUMENTED</h3>
+                <p class="text-center pt-3">Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Aperiam dolorem
+                    <br> odit id, voluptatum officia
+                </p>
+            </div>
+            <div class="col-4">
+                <div class="text-center bg-primary rounded-circle w-25 mx-auto">
+                    <i class="fab fa-superpowers text-white" style="font-size: 60px;"></i>
+                </div>
+                <h3 class="text-center pt-4">SUPER FAST</h3>
+                <p class="text-center pt-3">Lorem ipsum dolor sit amet consectetur <br>adipisicing elit. Aperiam dolorem
+                    <br> odit id, voluptatum officia
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-info text-white pt-5 pb-2" id="features" style="background-image: url(./bg.png);">
+        <h1 class="text-center">FEATURES</h1>
+        <div class="line2 text-center">
+            <i class="fas fa-heart" style="font-size: 40px;"></i>
+        </div>
+        <div class="row pt-5">
+            <div class="col-4">
+                <div class="row mt-4">
+                    <div class="col-11">
+                        <h6 class=" text-right mr-4">SUPER FAST</h6>
+                        <p class=" text-right mr-4">Lorem ipsum dolor sit amet <br>consectetur adipisicing<br> elit.
+                            Aperiam
+                            dolorem
+                        </p>
+                    </div>
+                    <div class="col-1 ">
+                        <div class="text-center  mt-4">
+                            <i class="fas fa-syringe text-white" style="font-size: 40px;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-11">
+                        <h6 class=" text-right mr-4">Unlimited Features</h6>
+                        <p class=" text-right mr-4">Lorem ipsum dolor sit amet <br>consectetur adipisicing<br> elit.
+                            Aperiam
+                            dolorem
+                        </p>
+                    </div>
+                    <div class="col-1 ">
+                        <div class="text-center  mt-4">
+                            <i class="fas fa-lightbulb text-white" style="font-size: 40px;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-11">
+                        <h6 class=" text-right mr-4">User Friendly</h6>
+                        <p class=" text-right mr-4">Lorem ipsum dolor sit amet <br>consectetur adipisicing<br> elit.
+                            Aperiam
+                            dolorem
+                        </p>
+                    </div>
+                    <div class="col-1 ">
+                        <div class="text-center  mt-4">
+                            <i class="far fa-heart text-white" style="font-size: 40px;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="./1-3.png" width="80%" height="550px" class="ml-5">
+            </div>
+            <div class="col-4">
+                <div class="row mt-4">
+                    <div class="col-1">
+                        <i class="fas fa-eye mt-4" style="font-size: 40px;"></i>
+                    </div>
+                    <div class="col-11">
+                        <h6 class="ml-5">RETINA READY</h6>
+                        <p class="ml-5">Lorem ipsum dolor sit amet <br>consectetur adipisicing<br> elit. Aperiam dolorem
+                        </p>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-1">
+                        <i class="fas fa-pencil-alt text-white mt-1" style="font-size: 40px;"></i>
+                    </div>
+                    <div class="col-11">
+                        <h6 class="ml-5">WELL DOCUMENTED</h6>
+                        <p class="ml-5">Lorem ipsum dolor sit amet <br>
+                        </p>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-1">
+                        <i class="fab fa-superpowers text-white mt-4" style="font-size: 40px;"></i>
+                    </div>
+                    <div class="col-11">
+                        <h6 class="ml-5">Super Powerfull</h6>
+                        <p class="ml-5">Lorem ipsum dolor sit amet <br>consectetur adipisicing<br> elit. Aperiam dolorem
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5 pb-2">
+        <h1 class="text-center">SHOWCASE</h1>
+        <div class="line text-center">
+            <i class="fas fa-heart" style="font-size: 40px;"></i>
+        </div>
+        <p class="text-center pt-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Magnam quas voluptatibus
+            tempore<br> sunt aut repudiandae numquam sapiente necessitatibus, adipisci voluptates fugiat,
+            omnis<br> totam a amet. Consequuntur dolor assumenda fugit illo.
+        </p>
+        <div class="row mt-5 h-75">
+            <div class="col-6 ml-5 ">
+                <h4>Eye Catching details</h4>
+                <p class=" pt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Magnam quas voluptatibus
+                    <br> sunt aut repudiandae numquam sapiente necessitatibus, adipisci voluptates fugiat,
+                    <br> totam a amet. Consequuntur dolor assumenda fugit illo.
+                </p>
+                <i class="fab fa-superpowers text-dark ml-4"><b>Super Fast</b></i>
+                <p class="ml-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Magnam quas volu<br>ptatibus
+                </p>
+                <i class="fas fa-lightbulb text-dark mt-4 ml-4"><b>Unlimited Features</b></i>
+                <p class="ml-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Magnam quas volu<br>ptatibus
+                </p>
+            </div>
+            <div class="col-5 ml-5">
+                <img src="3-1.png" width="70%">
+                <img src="3-2.png" width="70%" class="position-relative" style="top:-310px">
+            </div>
+        </div>
+        <div class="row mt-5 h-75">
+            <div class="col-5 ml-5">
+                <img src="2-1.png" width="70%">
+                <img src="2-2.png" width="70%" class="position-relative" style="top:-310px">
+            </div>
+            <div class="col-6 ml-5 ">
+                <h4>Unique Custom Design</h4>
+                <p class=" pt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Magnam quas voluptatibus
+                    <br> sunt aut repudiandae numquam sapiente necessitatibus, adipisci voluptates fugiat,
+                    <br> totam a amet. Consequuntur dolor assumenda fugit illo.
+                </p>
+                <i class="fas fa-pencil-alt text-dark ml-4"><b>Well Documented</b></i>
+                <p class="ml-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Magnam quas volu<br>ptatibus
+                </p>
+                <i class="far fa-heart text-dark ml-4"><b>Full chart</b></i>
+                <p class="ml-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Magnam quas volu<br>ptatibus
+                </p>
+            </div>
+        </div>
+        <div class="row mt-5 h-75">
+            <div class="col-6 ml-5 ">
+                <h4>Awesome built-in Features</h4>
+                <p class=" pt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Magnam quas voluptatibus
+                    <br> sunt aut repudiandae numquam sapiente necessitatibus, adipisci voluptates fugiat,
+                    <br> totam a amet. Consequuntur dolor assumenda fugit illo.
+                </p>
+                <i class="fas fa-eye ml-4"><b>Retina Ready</b></i>
+                <p class="ml-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Magnam quas volu<br>ptatibus
+                </p>
+                <i class="far fa-heart text-dark ml-4"><b>User Friendly</b></i>
+                <p class="ml-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Magnam quas volu<br>ptatibus
+                </p>
+            </div>
+            <div class="col-5 ml-5">
+                <img src="3-2.png" width="70%">
+                <img src="3-1.png" width="70%" class="position-relative" style="top:-310px">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5 bg-dark text-white pb-2">
+        <div class="row">
+            <div class="col-3 ml-5">
+                <h2>SUBSCRIBE</h2>
+            </div>
+            <div class="col-7 pt-2">
+                <input type="text" placeholder="E-mail" class="w-100 h-100 pl-5" style="border-radius: 55px;">
+            </div>
+            <div class="col-1">
+                <input type="text" class="bg-info position-relative" style="left:-210px;top:8px;height:85%;
+             border-top-right-radius: 27px;border-bottom-right-radius: 27px;border-right: gray;">
+                <i class="fab fa-telegram-plane position-relative" style="left:-120px;top:-20px"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid pt-5 text-center" id="screenshots">
+        <h1 class="text-center">SCREENSHOTS</h1>
+        <div class="line text-center">
+            <i class="fas fa-heart" style="font-size: 40px;"></i>
+        </div>
+        <p class="text-center pt-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Magnam quas voluptatibus
+            tempore<br> sunt aut repudiandae numquam sapiente necessitatibus, adipisci voluptates fugiat,
+            omnis<br> totam a amet. Consequuntur dolor assumenda fugit illo.
+        </p>
+        <div class="carousel slide" id="carousel6" data-ride="carousel" data-interval="2000" data-pause="hover">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel6" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel6" data-slide-to="1"></li>
+                <li data-target="#carousel6" data-slide-to="2"></li>
+                <li data-target="#carousel6" data-slide-to="3"></li>
+                <li data-target="#carousel6" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container-fluid mt-5" style="margin-left: 7%;">
+                        <img src="./1-1.png" width="10%" height="300px" style="opacity: 0.5;">
+                        <img src="./1-2.png" width="10%" height="320px" class="position-relative"
+                            style="left:-50px;opacity: 0.8;">
+                        <img src="./1-3.png" width="10%" height="320px" class="position-relative" style="left:50px">
+                        <img src="./1-4.png" width="10%" height="300px" style="opacity: 0.5;">
+                        <img src="./1-1.png" width="13%" height="340px" class="position-relative" style="left:-350px;">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container-fluid mt-5" style="margin-left: 7%;">
+                        <img src="./1-2.png" width="10%" height="300px" style="opacity: 0.5;">
+                        <img src="./1-1.png" width="10%" height="320px" class="position-relative"
+                            style="left:-50px;opacity: 0.8;">
+                        <img src="./1-4.png" width="10%" height="320px" class="position-relative" style="left:50px">
+                        <img src="./1-3.png" width="10%" height="300px" style="opacity: 0.5;">
+                        <img src="./1-2.png" width="13%" height="340px" class="position-relative" style="left:-350px;">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container-fluid mt-5" style="margin-left: 7%;">
+                        <img src="./1-3.png" width="10%" height="300px" style="opacity: 0.5;">
+                        <img src="./1-4.png" width="10%" height="320px" class="position-relative"
+                            style="left:-50px;opacity: 0.8;">
+                        <img src="./1-2.png" width="10%" height="320px" class="position-relative" style="left:50px">
+                        <img src="./1-1.png" width="10%" height="300px" style="opacity: 0.5;">
+                        <img src="./1-3.png" width="13%" height="340px" class="position-relative" style="left:-350px;">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container-fluid mt-5" style="margin-left: 7%;">
+                        <img src="./1-4.png" width="10%" height="300px" style="opacity: 0.5;">
+                        <img src="./1-2.png" width="10%" height="320px" class="position-relative"
+                            style="left:-50px;opacity: 0.8;">
+                        <img src="./1-1.png" width="10%" height="320px" class="position-relative" style="left:50px">
+                        <img src="./1-3.png" width="10%" height="300px" style="opacity: 0.5;">
+                        <img src="./1-4.png" width="13%" height="340px" class="position-relative" style="left:-350px;">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container-fluid mt-5" style="margin-left: 7%;">
+                        <img src="./1-1.png" width="10%" height="300px" style="opacity: 0.5;">
+                        <img src="./1-2.png" width="10%" height="320px" class="position-relative"
+                            style="left:-50px;opacity: 0.8;">
+                        <img src="./1-3.png" width="10%" height="320px" class="position-relative" style="left:50px">
+                        <img src="./1-4.png" width="10%" height="300px" style="opacity: 0.5;">
+                        <img src="./1-2.png" width="13%" height="340px" class="position-relative" style="left:-350px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="container-fluid pt-5 bg-info text-white text-center pb-5" id="testimonials">
+        <h1 class="text-center">TESTIMONIALS</h1>
+        <div class="line2 text-center">
+            <i class="fas fa-heart" style="font-size: 40px;"></i>
+        </div>
+        <div id="carousel2" class="carousel slide" data-ride="carousel" data-interval="2000">
+            <ol class="carousel-indicators position-relative" style="top:300px">
+                <li data-target="#carousel2" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel2" data-slide-to="1"></li>
+                <li data-target="#carousel2" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="border rounded-circle mx-auto" style="width: 10%;">
+                        <img src="./testimonials1.jpg" width="100%" class="rounded-circle">
+                    </div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Magnam quas voluptatibus
+                        tempore<br> sunt aut repudiandae numquam sapiente necessitatibus, adipisci voluptates fugiat,
+                        omnis<br> totam a amet. Consequuntur dolor assumenda fugit illo.
+                    </p>
+                    <h3>Mike</h3>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="border rounded-circle mx-auto" style="width: 10%;">
+                        <img src="./testimonials3.jpg" width="100%" class="rounded-circle">
+                    </div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Magnam quas voluptatibus
+                        tempore<br> sunt aut repudiandae numquam sapiente necessitatibus, adipisci voluptates fugiat,
+                        omnis<br> totam a amet. Consequuntur dolor assumenda fugit illo.
+                    </p>
+                    <h3>Abraham</h3>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="border rounded-circle mx-auto" style="width: 10%;">
+                        <img src="./testimonials4.jpg" width="100%" class="rounded-circle">
+                    </div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Magnam quas voluptatibus
+                        tempore<br> sunt aut repudiandae numquam sapiente necessitatibus, adipisci voluptates fugiat,
+                        omnis<br> totam a amet. Consequuntur dolor assumenda fugit illo.
+                    </p>
+                    <h3>John Doo</h3>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid py-5">
+        <h1 class="text-center">BEHIND THE STORY</h1>
+        <div class="line text-center">
+            <i class="fas fa-heart" style="font-size: 40px;"></i>
+        </div>
+        <p class="text-center pt-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Magnam quas voluptatibus
+            tempore<br> sunt aut repudiandae numquam sapiente necessitatibus, adipisci voluptates fugiat,
+            omnis<br> totam a amet. Consequuntur dolor assumenda fugit illo.
+        </p>
+        <div id="carousel3" class="carousel slide" data-ride="carousel" data-interval="2000">
+            <ol class="carousel-indicators position-relative" style="top:400px">
+                <li data-target="#carousel3" data-slide-to="0" class="active bg-dark"></li>
+                <li data-target="#carousel3" data-slide-to="1" class="bg-dark"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row" style="margin-left: 13%;">
+                        <div class="card col-3">
+                            <img src="./team1.jpg" height="250px" width="100%" class="card-img-top">
+                            <h1 class="card-title">Sandra More</h1>
+                            <p class="card-text">Web Developer</p>
+                        </div>
+                        <div class="card ml-5 col-3">
+                            <img src="./team3.jpg" height="250px" width="100%" class="card-img-top">
+                            <h1 class="card-title">John Snow</h1>
+                            <p class="card-text">Creation Studio</p>
+                        </div>
+                        <div class="card ml-5 col-3">
+                            <img src=" ./team2.jpg" height="250px" width="100%" class="card-img-top">
+                            <h1 class="card-title">David Bobby</h1>
+                            <p class="card-text">UNIX Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row" style="margin-left: 13%;">
+                        <div class="card col-3">
+                            <img src="./team3.jpg" height="250px" width="100%" class="card-img-top">
+                            <h1 class="card-title">John snow</h1>
+                            <p class="card-text">Creation Studio</p>
+                        </div>
+                        <div class="card ml-5 col-3">
+                            <img src="./team2.jpg" height="250px" width="100%" class="card-img-top">
+                            <h1 class="card-title">David Bobby</h1>
+                            <p class="card-text">UNIX Designer</p>
+                        </div>
+                        <div class="card ml-5 col-3">
+                            <img src=" ./team2.jpeg" height="250px" width="100%" class="card-img-top">
+                            <h1 class="card-title">George</h1>
+                            <p class="card-text">Jr.Web Designer</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="downloads" class="container-fluid pt-5  text-white h-100 pb-2" style="background-image: url(./bg.png);">
+        <h1 class="text-center">GET IT NOW</h1>
+        <div class="line2 text-center">
+            <i class="fas fa-heart" style="font-size: 40px;"></i>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <p class="text-left pt-5 ml-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Magnam quas voluptatibus
+                    tempore<br> sunt aut repudiandae numquam sapiente necessitatibus, adipisci voluptates fugiat,
+                    omnis<br> totam a amet. Consequuntur dolor assumenda fugit illo.
+                </p>
+                <img src="./appstore.jpg" width="20%" class="mt-5 ml-5">
+                <img src="./googlestore.png" width="20%" class="mt-5 ml-3" height="56px">
+                <img src="./windowsstore.jpg" width="20%" class="mt-5 ml-3" height="56px">
+                <div class="mt-5 ml-5">
+                    <button type="button" class="border border-white text-white rounded bg-dark">Scan QR Code</button>
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="./2-1.png" height="520px">
+            </div>
+        </div>
+    </div>
+
+    <div id="news" class="container-fluid py-5">
+        <h1 class="text-center">LATEST NEWS</h1>
+        <div class="line text-center">
+            <i class="fas fa-heart" style="font-size: 40px;"></i>
+        </div>
+        <p class="text-center pt-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Magnam quas voluptatibus
+            tempore<br> sunt aut repudiandae numquam sapiente necessitatibus, adipisci voluptates fugiat,
+            omnis<br> totam a amet. Consequuntur dolor assumenda fugit illo.
+        </p>
+        <div id="carousel4" class="carousel slide" data-ride="carousel" data-interval="2000">
+            <ol class="carousel-indicators position-relative" style="top:600px">
+                <li data-target="#carousel4" data-slide-to="0" class="active bg-dark"></li>
+                <li data-target="#carousel4" data-slide-to="1" class="bg-dark"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row mt-5">
+                        <div class="card col-4 pb-2">
+                            <img src="./news4.jpg" width="100%" class="card-img-top">
+                            <i class="fas fa-user-friends ml-5"> john doe<i class="fas fa-calendar-minus ml-5"> 24 oct
+                                    1998</i></i>
+                            <h3 class="card-title">lorem ipsium dolor sit.</h3>
+                            <p class="card-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Magnam quas voluptatibus<br>
+                                tempore sunt aut repudiandae
+                            </p>
+                            <button class="btn btn-dark">Read More</button>
+                        </div>
+                        <div class="card col-4 pb-2">
+                            <img src="./news2.jpg" width="100%" class="card-img-top">
+                            <i class="fas fa-user-friends ml-5"> john doe<i class="fas fa-calendar-minus ml-5"> 24 oct
+                                    1998</i></i>
+                            <h3 class="card-title">lorem ipsium dolor sit.</h3>
+                            <p class="card-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Magnam quas voluptatibus<br>
+                                tempore sunt aut repudiandae
+                            </p>
+                            <button class="btn btn-dark">Read More</button>
+                        </div>
+                        <div class="card col-4">
+                            <img src="./news3.jpg" width="100%" class="card-img-top">
+                            <i class="fas fa-user-friends ml-5"> john doe<i class="fas fa-calendar-minus ml-5"> 24 oct
+                                    1998</i></i>
+                            <h3 class="card-title">lorem ipsium dolor sit.</h3>
+                            <p class="card-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Magnam quas voluptatibus<br>
+                                tempore sunt aut repudiandae
+                            </p>
+                            <button class="btn btn-dark">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row mt-5">
+                        <div class="card col-4 pb-2">
+                            <img src="./news2.jpg" width="100%" class="card-img-top">
+                            <i class="fas fa-user-friends ml-5"> john doe<i class="fas fa-calendar-minus ml-5"> 24 oct
+                                    1998</i></i>
+                            <h3 class="card-title">lorem ipsium dolor sit.</h3>
+                            <p class="card-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Magnam quas voluptatibus<br>
+                                tempore sunt aut repudiandae
+                            </p>
+                            <button class="btn btn-dark">Read More</button>
+                        </div>
+                        <div class="card col-4 pb-2">
+                            <img src="./news3.jpg" width="100%" class="card-img-top">
+                            <i class="fas fa-user-friends ml-5"> john doe<i class="fas fa-calendar-minus ml-5"> 24 oct
+                                    1998</i></i>
+                            <h3 class="card-title">lorem ipsium dolor sit.</h3>
+                            <p class="card-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Magnam quas voluptatibus<br>
+                                tempore sunt aut repudiandae
+                            </p>
+                            <button class="btn btn-dark">Read More</button>
+                        </div>
+                        <div class="card col-4">
+                            <img src="./news1.jpg" width="100%" class="card-img-top">
+                            <i class="fas fa-user-friends ml-5"> john doe<i class="fas fa-calendar-minus ml-5"> 24 oct
+                                    1998</i></i>
+                            <h3 class="card-title">lorem ipsium dolor sit.</h3>
+                            <p class="card-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Magnam quas voluptatibus<br>
+                                tempore sunt aut repudiandae
+                            </p>
+                            <button class="btn btn-dark">Read More</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5 pb-2  text-white" style="background-image: url(./bg.png);">
+        <h1 class="text-center">WATCH VIDEO</h1>
+        <div class="line2 text-center">
+            <i class="fas fa-heart" style="font-size: 40px;"></i>
+        </div>
+        <p class="text-center mt-4">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Magnam quas voluptatibus<br>
+            tempore sunt aut repudiandae
+        </p>
+        <h1 class="text-center" style="font-size: 70px;"><i class="fab fa-youtube"></i></h1>
+    </div>
+
+    <div id="prices" class="container-fluid pt-5 pb-2">
+        <h1 class="text-center">PRICES</h1>
+        <div class="line text-center">
+            <i class="fas fa-heart" style="font-size: 40px;"></i>
+        </div>
+        <p class="text-center mt-4">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Magnam quas voluptatibus<br>
+            tempore sunt aut repudiandae
+        </p>
+        <div class="row text-center mt-4" style="margin-left: 13%;">
+            <div class="col-3 pt-3 bg-secondary card pb-2">
+                <h6 class="text-center card-title">Freelancer</h6>
+                <hr>
+                <div class="card-body">
+                    <h3 class="card-title">$10.99/month</h3>
+                    <hr>
+                    <h6>Support Forum</h6>
+                    <h6>Free hosting</h6>
+                    <h6>50GB Of Free Storage</h6>
+                    <h6>Admin Area</h6>
+                    <button class="btn btn-dark mt-5 w-100">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-3 pt-3 bg-primary card pb-2 ml-5">
+                <h6 class="text-center card-title">Single project</h6>
+                <hr>
+                <div class="card-body">
+                    <h3 class="card-title">$20.99/month</h3>
+                    <hr>
+                    <h6>Support Forum</h6>
+                    <h6>Free hosting</h6>
+                    <h6>50GB Of Free Storage</h6>
+                    <h6>Admin Area</h6>
+                    <h6>Unlimited hosting</h6>
+                    <button class="btn btn-dark mt-3 w-100">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-3 pt-3 bg-secondary card pb-2 ml-5">
+                <h6 class="text-center card-title">Multiple projects</h6>
+                <hr>
+                <div class="card-body">
+                    <h3 class="card-title">$33.99/month</h3>
+                    <hr>
+                    <h6>Support Forum</h6>
+                    <h6>Free hosting</h6>
+                    <h6>50GB Of Free Storage</h6>
+                    <h6>Admin Area</h6>
+                    <button class="btn btn-dark mt-5 w-100">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5 pb-2 text-white" style="background-image: url(./bg.png);">
+        <h1 class="text-center">STATISTICS</h1>
+        <div class="line2 text-center">
+            <i class="fas fa-heart" style="font-size: 40px;"></i>
+        </div>
+        <p class="text-center pt-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Magnam quas voluptatibus
+            tempore<br> sunt aut repudiandae numquam sapiente necessitatibus, adipisci voluptates fugiat,
+            omnis<br> totam a amet. Consequuntur dolor assumenda fugit illo.
+        </p>
+        <div class="row text-center mt-5">
+            <div class="col-3">
+                <div class=" mx-auto text-dark card" style="width:25%;font-size: 50px;">
+                    <i class="fas fa-heart card-img-top rounded-circle"></i>
+                </div>
+                <p>Happy clients</p>
+                <h2>1232</h2>
+            </div>
+            <div class="col-3">
+                <div class="mx-auto bg-dark card" style="width:25%;font-size: 40px;">
+                    <i class="fas fa-cloud-download-alt card-img-top"></i>
+                </div>
+                <p>App Downloads</p>
+                <h2>64k</h2>
+            </div>
+            <div class="col-3">
+                <div class=" mx-auto text-dark card" style="width:25%;font-size: 50px;">
+                    <i class="fas fa-users card-img-top"></i>
+                </div>
+                <p>Active User</p>
+                <h2>1811</h2>
+            </div>
+            <div class="col-3">
+                <div class="mx-auto bg-dark card" style="width:25%;font-size: 50px;">
+                    <i class="fas fa-star card-img-top"></i>
+                </div>
+                <p>Total Rates</p>
+                <h2>232</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5 pb-2" id="faq">
+        <h1 class="text-center">FAQ's</h1>
+        <div class="line text-center">
+            <i class="fas fa-heart" style="font-size: 40px;"></i>
+        </div>
+        <p class="text-center pt-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Magnam quas voluptatibus
+            tempore<br> sunt aut repudiandae numquam sapiente necessitatibus, adipisci voluptates fugiat,
+            omnis<br> totam a amet. Consequuntur dolor assumenda fugit illo.
+        </p>
+        <div class="row h-100">
+            <div class="col-4 mt-5 ml-5">
+                <img src="./1-2.png" width="100%" height="600px">
+                <img src="./1-1.png" width="80%" height="650px" class="position-relative" style="top:-620px">
+            </div>
+            <div class="col-7 mt-3 pt-3">
+                <div class="card py-1 bg-primary">
+                    <a href="#ans1" data-toggle="collapse" class="d-flex text-white" id="ques1">
+                        <span class="ml-2"><i class="fas fa-cloud"></i>&nbsp;&nbsp;Why this app is so awesome?</span>
+                        <i class="fas fa-plus ml-auto"> </i>
+                    </a>
+                </div>
+                <div class="collapse show card card-body" aria-labelledby="ques1" id="ans1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nisi commodi impedit <br>
+                        asperiores vero reprehenderit vel inventore, officia debitis
+                    </p>
+                </div>
+
+                <div class="card py-1 bg-primary mt-3">
+                    <a href="#ans2" data-toggle="collapse" class="d-flex text-white" id="ques2">
+                        <span class="ml-2"><i class="fas fa-cloud"></i>&nbsp;&nbsp;Can I get a discount by inviting
+                            friends</span>
+                        <i class="fas fa-plus ml-auto"> </i>
+                    </a>
+                </div>
+                <div class="collapse show card card-body" aria-labelledby="ques2" id="ans2">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nisi commodi impedit <br>
+                        asperiores vero reprehenderit vel inventore, officia debitis
+                    </p>
+                </div>
+
+                <div class="card py-1 bg-primary mt-3">
+                    <a href="#ans3" data-toggle="collapse" class="d-flex text-white" id="ques3">
+                        <span class="ml-2"><i class="fas fa-cloud"></i>&nbsp;&nbsp;Lorem ipsum dolor sit amet,
+                            consectetur adipisicing elit</span>
+                        <i class="fas fa-plus ml-auto"> </i>
+                    </a>
+                </div>
+                <div class="collapse show card card-body" aria-labelledby="ques3" id="ans3">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nisi commodi impedit <br>
+                        asperiores vero reprehenderit vel inventore, officia debitis
+                    </p>
+                </div>
+
+                <div class="card py-1 bg-primary mt-3">
+                    <a href="#ans4" data-toggle="collapse" class="d-flex text-white" id="ques4">
+                        <span class="ml-2"><i class="fas fa-cloud"></i>&nbsp;&nbsp;asperiores vero reprehenderit vel
+                            inventore, officia debitis </span>
+                        <i class="fas fa-plus ml-auto"> </i>
+                    </a>
+                </div>
+                <div class="collapse show card card-body" aria-labelledby="ques4" id="ans4">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nisi commodi impedit <br>
+                        asperiores vero reprehenderit vel inventore, officia debitis
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="map-container-google-1" class="z-depth-1-half map-container mt-5" style="height: 500px">
+        <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+            style="border:0" allowfullscreen></iframe>
+    </div>
+    <div class="container-fluid pt-5 bg-dark">
+        <div class="row text-secondary" style="margin-top:20%">
+            <div class="col-3">
+                <h6>About Us</h6>
+                <img src="./icon.png" class="mt-2"><br>
+                <img src="./title.png" width="30%" height="30px" class="mt-2">
+                <p class="mt-3">
+                    Lorem ipsum dolor sit amet consectetur <br>
+                    asperiores vero reprehenderit vel<br> inventore, officia debitis
+                </p>
+            </div>
+            <div class="col-3">
+                <h6>News</h6>
+                <div class="row mt-2">
+                    <div class="col-6">
+                        <img src="./news1.jpg" width="100%" height="80px">
+                    </div>
+                    <div class="col-6">
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-6">
+                        <img src="./news2.jpg" width="100%" height="80px">
+                    </div>
+                    <div class="col-6">
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <h6>Tags</h6>
+                <div class="mt-4">
+                    <span class="badge badge-secondary mt-2">App</span>
+                    <span class="badge badge-secondary ml-2 mt-2">Apperle</span>
+                    <span class="badge badge-secondary ml-2 mt-2">Google</span><br>
+                    <span class="badge badge-secondary mt-2">Android</span>
+                    <span class="badge badge-secondary ml-2 mt-2">Apple</span>
+                    <span class="badge badge-secondary ml-2 mt-2">Watch</span><br>
+                    <span class="badge badge-secondary mt-2">Download</span>
+                    <span class="badge badge-secondary ml-2 mt-2">News</span>
+                    <span class="badge badge-secondary ml-2 mt-2">Article</span><br>
+                    <span class="badge badge-secondary mt-2">Apple</span>
+                    <span class="badge badge-secondary ml-2 mt-2">Android</span>
+                    <span class="badge badge-secondary ml-2 mt-2">Google</span><br>
+                    <span class="badge badge-secondary mt-2">Article</span>
+                    <span class="badge badge-secondary ml-2 mt-2">Android</span>
+                    <span class="badge badge-secondary ml-2mt-2">Watch</span><br>
+                </div>
+            </div>
+            <div class="col-3">
+                <h6>Instagram Feed</h6>
+                <div class="row">
+                    <div class="col-6">
+                        <img src="./news3.jpg" width="100%">
+                    </div>
+                    <div class="col-6 position-relative" style="left:-30px">
+                        <img src="./news4.jpg" width="100%">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <img src="./news4.jpg" width="100%">
+                    </div>
+                    <div class="col-6 position-relative" style="left: -30px;">
+                        <img src="./news3.jpg" width="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row text-secondary mt-5">
+            <div class="col-8 text-center">
+                <span>Copyright &copy; 2017 Apperle HTML Template by Srikanth</span>
+            </div>
+            <div class="col-4 text-primary">
+                <i class="fab fa-facebook ml-5"></i>
+                <i class="fab fa-instagram ml-3"></i>
+                <i class="fab fa-twitter-square ml-3"></i>
+                <i class="fab fa-google-plus-g ml-3"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5 pb-2 bg-white position-relative w-75" id="contact" style="top:-1000px">
+        <h1 class="text-center">GET IN TOUCH</h1>
+        <div class="line text-center">
+            <i class="fas fa-heart" style="font-size: 40px;"></i>
+        </div>
+        <div class="form-group">
+            <div class="row mt-5">
+                <div class="col-8">
+                    <div class="border-bottom py-2">
+                        <i class="fas fa-user" style="font-size: 40px;"></i>
+                        <input type="text" placeholder="name" class="border-0 w-75"><br>
+                    </div>
+                    <div class="border-bottom py-2">
+                        <i class="fab fa-telegram-plane" style="font-size: 40px;"></i>
+                        <input type="email" class="mt-5 border-0 w-75" aria-describedby="emailHelp" placeholder="email">
+                    </div>
+                    <div class="border-bottom py-2">
+                        <i class="fas fa-envelope-square mt-5" style="font-size: 40px;"></i>
+                        <input type="text" placeholder="name" class="border-0 w-75"><br>
+                    </div>
+                    <button class="btn btn-primary mt-4" style="width: 70%;margin-left: 10%;">Send Message</button>
+                </div>
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col-2">
+                            <i class="fas fa-search-location" style="font-size: 60px;"></i>
+                        </div>
+                        <div class="col-10">
+                            <address class="ml-5">15 Bath Rd. Heathrow<br>Longford, Hungslow. TW6<br>2AB, UK </address>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-2">
+                            <i class="fas fa-phone-square-alt" style="font-size:60px"></i>
+                        </div>
+                        <div class="col-10">
+                            <p class="ml-5">+1447892694017</p>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-2">
+                            <i class="fab fa-telegram-plane" style="font-size: 60px;"></i>
+                        </div>
+                        <div class="col-10">
+                            <p class="ml-5">perla.app@example.com</p>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-12" style="font-size: 30px;">
+                            <i class="fab fa-facebook ml-5"></i>
+                            <i class="fab fa-instagram ml-3"></i>
+                            <i class="fab fa-twitter-square ml-3"></i>
+                            <i class="fab fa-google-plus-g ml-3"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./jquery-3.4.1.min.js"></script>
+    <script src="./popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>

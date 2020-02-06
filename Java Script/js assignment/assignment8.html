@@ -1,0 +1,39 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to generate a series of number
+    Author     : Srikanth S
+    Start Date : 31/10/19
+    End Date   : 31/10/19
+    ***************************************************************************-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WSA-assignment8</title>
+</head>
+
+<body>
+    <script>
+        var n = +(prompt("enter number of sequence"));
+        var res = 0;
+        var sum = 0;
+        var s=0;
+        //for the series of 1+1/2+1/3...
+        for (var j = 1; j <= n; j++) {
+             s =s + (1 / j);
+        }
+        //for the series of 2+4+6+......
+        for (var i = 1; i <= n; i++) {
+            res = res + 2;
+            sum = sum + res;
+        }
+        //output statements
+        document.write("input: " + n + "<br>");
+        document.write("output: " + s + "<br>");
+        document.write("output: " + sum);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to align paragraphs
+    Author     : Srikanth S
+    Start Date : 26/11/19
+    End Date   : 26/11/19
+    ***************************************************************************-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, hic! Rem totam
+        , cum eaque ratione libero laudantium,
+        soluta commodi labore molestias, praesentium ea consequuntur incidunt tempore odit quis dolorum voluptatem.
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, hic! Rem totam
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur</p>
+    <button onclick="le()">left</button>
+    <button onclick="ce()">center</button>
+    <button onclick="ri()">right</button>
+    <script>
+        function le() {
+            var a = document.getElementsByTagName("p");
+            //aligning text to left
+            for (let i = 0; i < a.length; i++) {
+                a[i].style.textAlign = "left"
+            }
+
+        }
+        function ce() {
+            //aligning text to center
+            var a = document.getElementsByTagName("p");
+            // a[0].style.textAlign = "center"
+            // a[1].style.textAlign = "center"
+            // a[2].style.textAlign = "center"
+            for (let i = 0; i < a.length; i++) {
+                a[i].style.textAlign = "center"
+            }
+        }
+        function ri() {
+            //aligning text to right
+            var a = document.getElementsByTagName("p");
+            for (let i = 0; i < a.length; i++) {
+                a[i].style.textAlign = "right"
+            }
+        }
+    </script>
+</body>
+
+</html>

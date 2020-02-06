@@ -1,0 +1,45 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to create element and text
+    Author     : Srikanth S
+    Start Date : 29/11/19
+    End Date   : 29/11/19
+    ***************************************************************************-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="p()">create para</button>
+    <button onclick="nav()">create nav</button>
+    <button onclick="strong()">create strong</button>
+    <script>
+        function p() {
+            var pa = document.createElement("P")//creating
+            var con = document.createTextNode("this is Srikanth Dhoni")//adding text
+            pa.appendChild(con)//adding text to element
+            document.body.appendChild(pa);//adding p to document
+        }
+        function nav() {
+            var n = document.createElement("A")
+            var attri = document.createAttribute("href")//creating attribute
+            attri.value = "#"//attr value
+            n.setAttributeNode(attri);//adding attr to element
+            var co = document.createTextNode("google")//adding content 
+            n.appendChild(co);
+            document.body.appendChild(n)//displaying in document
+        }
+        function strong() {
+            var pa = document.createElement("STRONG")
+            var con = document.createTextNode("this is Srikanth Dhoni with strong")
+            pa.appendChild(con)
+            document.body.appendChild(pa);
+        }
+    </script>
+</body>
+
+</html>

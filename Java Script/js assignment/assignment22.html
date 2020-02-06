@@ -1,0 +1,30 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to arrange a string in a given position
+    Author     : Srikanth S
+    Start Date : 15/11/19
+    End Date   : 15/11/19
+    ***************************************************************************-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str=prompt("enter the string");
+        var pos=prompt("enter the position");
+        var str2=str.split("");//converts to array
+        var str3=pos.split("");//converts to array
+        for(let i=0;i<str3.length;i++){
+            for(let j=0;j<str2.length;j++){
+                if(str3[i]==j){//checking 1st element of str3 with position of 1st element of str2
+                   document.write(str2[j]);
+                }
+            }
+        }
+    
+    </script>
+</body>
+</html>

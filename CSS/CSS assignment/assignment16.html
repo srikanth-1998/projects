@@ -1,0 +1,136 @@
+<!------------------------------------------------------------------------------------------------------------------
+create the following layout and apply transform
+Description : assignment16
+Author      : Srikanth S
+Start Date  : 26/09/2019
+-------------------------------------------------------------------------------------------------------------------->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WSA-assignment16</title>
+    <style>
+        .cont {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px 10px;
+            width: 35%;
+            border: 2px solid black;
+            padding: 10px;
+            grid-auto-rows: min-content;
+        }
+
+        div>div {
+            background-color: green;
+            height: 90px;
+            display: inline-block;
+            text-align: center;
+            transform: all 2s;
+            transition-duration: 2s;
+
+        }
+
+        .ahover {
+            grid-area: 1/1/2/2;
+        }
+
+        .hhover:hover {
+            grid-row: 3/4;
+            grid-column: 2/4;
+            background-color: orange;
+            color: gray;
+            font-size: 20px;
+        }
+
+        .ahover:hover {
+            grid-column: 1/4;
+            grid-row: 1/2;
+            background-color: orange;
+            color: red;
+            font-size: 20px;
+        }
+
+        .chover:hover~.d4 {
+            grid-column: 1/4;
+            grid-row: 2/3;
+            color: blue;
+            font-size: 20px;
+            background-color: rgb(207, 45, 140);
+        }
+
+        .chover:hover~.d5 {
+            grid-column: 1/4;
+            grid-row: 3/4;
+            color: blue;
+            font-size: 20px;
+            background-color: rgb(207, 45, 140);
+        }
+
+        .chover:hover~.d6 {
+            grid-column: 1/4;
+            grid-row: 4/5;
+            color: blue;
+            font-size: 20px;
+            background-color: rgb(207, 45, 140);
+        }
+
+        .chover:hover~.d7 {
+            grid-column: 1/4;
+            grid-row: 5/6;
+            color: blue;
+            font-size: 20px;
+            background-color: rgb(207, 45, 140);
+        }
+
+        .chover:hover~.hhover {
+            grid-column: 1/4;
+            grid-row: 6/7;
+            color: blue;
+            font-size: 20px;
+            background-color: rgb(207, 45, 140);
+        }
+
+        .bhover:hover {
+
+            background-color: aqua;
+            font-size: 20px;
+            color: white;
+            grid-area: 1/1/4/3;
+            height: auto;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <div class="ahover">
+            <p>A<br>hover</p>
+        </div>
+        <div class="bhover">
+            <p>B<br>hover</p>
+        </div>
+        <div class="chover">
+            <p>C<br>hover</p>
+        </div>
+        <div class="d4">
+            <p>D</p>
+        </div>
+        <div class="d5">
+            <p>E</p>
+        </div>
+        <div class="d6">
+            <p>F</p>
+        </div>
+        <div class="d7">
+            <p>G</p>
+        </div>
+        <div class="hhover">
+            <p>H<br>hover</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to convert first letter of word to upercase
+    Author     : Srikanth S
+    Start Date : 18/11/19
+    End Date   : 18/11/19
+    ***************************************************************************-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str=prompt("enter the string");
+        //spliting str by space
+        var str1=str.split(" ");
+        var res;
+        for(let i=0;i<str1.length;i++){
+            //spliting str by each character
+            var res=str1[i].split("");
+            //converting first character to upper case
+         res[0]=res[0].toUpperCase();
+         //joing the str
+         var p=res.join("");
+         document.write(p+" ")
+        }
+    </script>
+</body>
+</html>

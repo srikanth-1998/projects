@@ -1,0 +1,551 @@
+<!------------------------------------------------------------------------------------------------------------------
+create the following windows 10
+Description : assignment13
+Author      : Srikanth S
+Start Date  : 13/09/2019
+-------------------------------------------------------------------------------------------------------------------->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WSA-assignment13</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px 10px;
+        }
+
+        .sc1 {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 5px 5px;
+            grid-auto-rows: 80px;
+            background-color: black;
+            color: white;
+            margin-top: 5%;
+        }
+
+        .it1 {
+            grid-row: 1/3;
+            grid-column: 1/3;
+            background-color: rgb(41, 41, 184);
+        }
+
+        .it2 {
+            grid-row: 1/3;
+            grid-column: 3/7;
+            background-color: rgb(41, 41, 184);
+        }
+
+        .it3 {
+            grid-row: 3/5;
+            grid-column: 1/3;
+            background-color: rgb(41, 41, 184);
+        }
+
+        .it4 {
+            grid-row: 3/5;
+            grid-column: 3/5;
+            background-color: orangered;
+        }
+
+        .it5 {
+            grid-row: 3/4;
+            grid-column: 5/6;
+            background-color: rgb(9, 9, 75);
+        }
+
+        .it6 {
+            grid-row: 3/4;
+            grid-column: 6/7;
+            background-color: orangered;
+        }
+
+        .it7 {
+            grid-row: 4/5;
+            grid-column: 5/6;
+            background-color: rgb(12, 85, 12);
+        }
+
+        .it8 {
+            grid-row: 4/5;
+            grid-column: 6/7;
+            background-color: rgb(117, 18, 117);
+        }
+
+        #fir {
+            color: white;
+            position: absolute;
+            top: 1%;
+            font-size: 18px;
+        }
+
+        .sc2 {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 5px 5px;
+            grid-auto-rows: 80px;
+            margin-top: 5%;
+            color: white;
+            background-color: black;
+        }
+
+        .its1 {
+            grid-row: 1/3;
+            grid-column: 1/3;
+            background-color: rgb(24, 129, 24);
+        }
+
+        .its2 {
+            grid-row: 1/2;
+            grid-column: 3/4;
+            background-color: rgb(41, 41, 184);
+        }
+
+        .its3 {
+            grid-row: 1/2;
+            grid-column: 4/5;
+            background-color: rgb(41, 41, 184);
+        }
+
+        .its4 {
+            grid-row: 1/3;
+            grid-column: 5/7;
+            background-color: rgb(41, 41, 184);
+        }
+
+        .its5 {
+            grid-row: 2/3;
+            grid-column: 3/4;
+            background-color: rgb(41, 41, 184);
+        }
+
+        .its6 {
+            grid-row: 2/3;
+            grid-column: 4/5;
+            background-color: rgb(41, 41, 184);
+        }
+
+        .its7 {
+            grid-row: 3/5;
+            grid-column: 1/3;
+            background-color: rgb(25, 25, 56);
+        }
+
+        .its8 {
+            grid-row: 3/5;
+            grid-column: 3/5;
+            background-color: rgb(25, 25, 56);
+        }
+
+        .its9 {
+            grid-row: 3/5;
+            grid-column: 5/7;
+            background-color: rgb(25, 25, 56);
+        }
+
+        .its10 {
+            grid-row: 5/7;
+            grid-column: 1/3;
+            background-color: rgb(25, 25, 56);
+        }
+
+        .its11 {
+            grid-row: 5/7;
+            grid-column: 3/5;
+            background-color: rgb(25, 25, 56);
+        }
+
+        .its12 {
+            grid-row: 5/7;
+            grid-column: 5/7;
+            background-color: rgb(25, 25, 56);
+        }
+
+        #sec {
+            color: white;
+            position: absolute;
+            top: 1%;
+            font-size: 18px;
+        }
+
+        .sc3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 5px 5px;
+            grid-auto-rows: 160px;
+            margin-top: -15%;
+            color: white;
+            background-color: black;
+            height: 500px;
+        }
+
+        .i1 {
+            grid-row: 1/2;
+            grid-column: 1/3;
+            background-color: rgb(25, 25, 56);
+        }
+
+        .i2 {
+            grid-row: 1/2;
+            grid-column: 3/4;
+            background-color: rgb(25, 25, 56);
+        }
+
+        .i3 {
+            grid-row: 2/3;
+            grid-column: 1/2;
+            background-color: rgb(25, 25, 56);
+        }
+
+        .i4 {
+            grid-row: 2/3;
+            grid-column: 2/3;
+            background-color: rgb(25, 25, 56);
+        }
+
+        .i5 {
+            grid-row: 2/3;
+            grid-column: 3/4;
+            background-color: rgb(25, 25, 56);
+        }
+
+        .i6 {
+            grid-row: 3/4;
+            grid-column: 1/2;
+            background-color: rgb(25, 25, 56);
+        }
+
+        .i7 {
+            grid-row: 3/4;
+            grid-column: 2/3;
+            background-color: rgb(223, 108, 14);
+        }
+
+        .i8 {
+            grid-row: 3/4;
+            grid-column: 3/4;
+            background-color: rgb(25, 25, 56);
+        }
+
+        #thr {
+            color: white;
+            position: relative;
+            top: -330%;
+            font-size: 18px;
+        }
+
+        .sc4 {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 5px 5px;
+            grid-auto-rows: 78px;
+            margin-top: 10%;
+            color: white;
+            background-color: black;
+            height: 340px
+        }
+
+        .ie1 {
+            grid-row: 1/3;
+            grid-column: 1/3;
+            background-color: rgb(25, 25, 56);
+        }
+
+        .ie2 {
+            grid-row: 1/2;
+            grid-column: 3/4;
+            background-color: rgb(25, 25, 56);
+        }
+
+        .ie3 {
+            grid-row: 1/2;
+            grid-column: 4/5;
+            background-color: rgb(25, 25, 56);
+        }
+
+        .ie4 {
+            grid-row: 1/3;
+            grid-column: 5/7;
+            background-color: rgb(25, 25, 56);
+        }
+
+        .ie5 {
+            grid-row: 2/3;
+            grid-column: 3/4;
+            background-color: rgb(25, 25, 56);
+        }
+
+        .ie6 {
+            grid-row: 2/3;
+            grid-column: 4/5;
+            background-color: rgb(25, 25, 56);
+        }
+
+        .ie7 {
+            grid-row: 3/5;
+            grid-column: 1/3;
+            background-color: rgb(25, 25, 56);
+        }
+
+        .ie8 {
+            grid-row: 3/5;
+            grid-column: 3/5;
+            background-color: rgb(25, 25, 56);
+        }
+
+        .ie9 {
+            grid-row: 3/5;
+            grid-column: 5/7;
+            background-color: rgb(69, 69, 163);
+        }
+
+        #four {
+            color: rgb(221, 216, 216);
+            position: relative;
+            top: -480%;
+            font-size: 18px;
+        }
+
+        .img1 {
+            width: 50%;
+            height: 50%;
+            margin-top: 17%;
+            margin-left: 24%;
+        }
+
+        .p1 {
+            font-size: 25px;
+            margin-top: 5%;
+            margin-left: 5%;
+            display: inline-block;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .img2 {
+            width: 10%;
+            height: 10%;
+            /* margin-top:17%; */
+            margin-left: 24%;
+        }
+
+        .img3 {
+            height: 75%;
+            width: 100%
+        }
+
+        .img4 {
+            margin-top: 0%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .p3 {
+            margin-top: -8%;
+            font-size: 25px;
+            margin-left: 5%;
+        }
+
+        .p4 {
+            margin-top: -14%;
+            font-size: 25px;
+            margin-left: 5%;
+        }
+
+        .img5 {
+            width: 10%;
+            height: 10%;
+            /* margin-top:17%; */
+            margin-left: 24%;
+        }
+
+        .img6 {
+            width: 20%;
+            height: 30%;
+            margin-left: 10%;
+            margin-top: 5%;
+        }
+
+        .p5 {
+            text-align: center;
+            font-size: 25px;
+            margin-top: -1%;
+        }
+
+        .p6 {
+            margin-left: 5%;
+            font-size: 25px;
+            margin-top: -5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!--1st grid-->
+        <div class="sc1">
+            <div id="fir">Create</div>
+            <div class="it1">
+                <img src="./1.jpg" class="img1">
+                <p class="p1">Calendar</p>
+            </div>
+            <div class="it2">
+                <div>
+                    <img class="img6" src="./gmail.jpg">
+                    <img src="./10.png" class="img6">
+                    <img src="./3.jpg" class="img6">
+                </div>
+                <p class="p5">All your mail in one place <br>Add your accounts</p>
+                <p class="p6">Mail</p>
+            </div>
+            <div class="it3">
+                <img src="./4.png" class="img1">
+                <p class="p1">Paint 3D</p>
+            </div>
+            <div class="it4">
+                <p class="p1">Get Office on<br> your phone <br>and tablet</p>
+                <p class="p1">Get Office</p>
+                <img src="./3.png" class="img2">
+            </div>
+            <div class="it5">
+                <img src="./7.jpg" class="img1">
+            </div>
+            <div class="it6">
+                <img src="./6.jpg" class="img1">
+            </div>
+            <div class="it7">
+                <img src="./8.png" class="img1">
+            </div>
+            <div class="it8">
+                <img src="./note.png" class="img1">
+            </div>
+        </div>
+        <!--second grid-->
+        <div class="sc2">
+            <div id="sec">Play</div>
+            <div class="its1">
+                <img src="./x-box.jpg" class="img3">
+                <p class="p1">Xbox</p>
+            </div>
+            <div class="its2">
+                <img src="./video.png" class="img1">
+            </div>
+            <div class="its3">
+                <img src="./audio.png" class="img1">
+            </div>
+            <div class="its4">
+                <img src="./photo.png" class="img1">
+                <p class="p1">Photos</p>
+            </div>
+            <div class="its5">
+                <img src="./skype.png" class="img1">
+            </div>
+            <div class="its6">
+                <img src="./location.png" class="img1">
+            </div>
+            <div class="its7">
+                <img src="./candycrush.jfif" class="img4">
+            </div>
+            <div class="its8">
+
+                <img src="./xboximg.jpg" class="img4">
+            </div>
+            <div class="its9">
+                <img src="./solitare.png" class="img4">
+            </div>
+            <div class="its10">
+                <img src="./asph.jpg" class="img4">
+            </div>
+            <div class="its11">
+                <img src="./coas.jpg" class="img4">
+            </div>
+            <div class="its12">
+                <img src="./age.jpeg" class="img4">
+            </div>
+        </div>
+        <!--third grid-->
+        <div class="sc3">
+            <div id="thr">Explore</div>
+            <div class="i1">
+                <img src="./store.png" class="img4">
+                <p class="p3">store</p>
+            </div>
+            <div class="i2">
+                <img src="./ie.png" class="img4">
+            </div>
+            <div class="i3">
+                <img src="./wea.jpg" class="img4">
+                <p class="p4">Weather</p>
+            </div>
+            <div class="i4">
+                <img src="./fb-logo.png" class="img4">
+                <p class="p4">Facebook</p>
+            </div>
+            <div class="i5">
+                <img src="./twitter.png" class="img4">
+                <p class="p4">Twitter</p>
+            </div>
+            <div class="i6">
+                <img src="./ps.png" class="img4">
+                <p class="p4">Photoshop ex..</p>
+            </div>
+            <div class="i7">
+                <p class="p1">Get Office on<br> your phone <br>and tablet</p>
+                <p class="p1">Get Office</p>
+                <img src="./news.png" class="img5">
+            </div>
+            <div class="i8">
+                <img src="./pencil.PNG" class="img4">
+                <p class="p4">Sketchbook</p>
+            </div>
+        </div>
+        <!--fourth grid-->
+        <div class="sc4">
+            <div id="four">OEM Group</div>
+            <div class="ie1">
+                <img src="./oem.PNG" class="img4">
+                <p class="p4">OEM Dash</p>
+            </div>
+            <div class="ie2">
+                <img src="./cube.jpg" class="img4">
+
+            </div>
+            <div class="ie3">
+                <img src="./clock.jpg" class="img4">
+
+            </div>
+            <div class="ie4">
+                <img src="./oem sync.PNG" class="img4">
+                <p class="p4">OEM Sync</p>
+
+            </div>
+            <div class="ie5">
+                <img src="./settings.png" class="img4">
+            </div>
+            <div class="ie6">
+                <img src="./oem.PNG" class="img4">
+            </div>
+            <div class="ie7">
+                <img src="./kindle.png" class="img4">
+            </div>
+            <div class="ie8">
+                <img src="./intel.jpg" class="img4">
+            </div>
+            <div class="ie9">
+                <img src="./amazon_PNG13.png" class="img4">
+            </div>
+
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>

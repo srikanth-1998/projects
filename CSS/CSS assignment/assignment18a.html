@@ -1,0 +1,231 @@
+<!------------------------------------------------------------------------------------------------------------------
+create the following dashboard using grid and flex
+Description : assignment18a
+Author      : Srikanth S
+Start Date  : 30/09/2019
+-------------------------------------------------------------------------------------------------------------------->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WSA-assignment18a</title>
+    <style>
+        .container {
+            margin-top: 5%;
+            width: 100%;
+            height: 500px;
+            border: 2px solid red;
+            background-image: linear-gradient(270deg, red, yellow);
+            border-radius: 0%;
+        }
+
+        .div1 {
+            width: 9.2%;
+            height: 123px;
+            border: 8px solid white;
+            margin-top: 10%;
+            margin-left: 2%;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .div2 {
+            width: 9.2%;
+            height: 123px;
+            border: 8px solid white;
+            /* margin-top: -10%; */
+            margin-left: 15%;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .div3 {
+            width: 9.2%;
+            height: 123px;
+            border: 8px solid white;
+            /* margin-top: -10%; */
+            margin-left: 15%;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .div4 {
+            width: 9.2%;
+            height: 123px;
+            border: 8px solid white;
+            /* margin-top: -10%; */
+            margin-left: 15%;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .svg1 {
+            transform: rotate(-80deg);
+            stroke-dasharray: 300;
+            stroke-dashoffset: 250;
+            animation: offsettozero 5s linear forwards;
+            margin-left: 3%;
+            margin-top: -124%
+        }
+
+        @keyframes offsettozero {
+            to {
+                stroke-dashoffset: 30;
+            }
+        }
+
+        .svg2 {
+            transform: rotate(-80deg);
+            stroke-dasharray: 300;
+            stroke-dashoffset: 250;
+            animation: off 5s linear forwards;
+            margin-left: 3%;
+            margin-top: -124%
+        }
+
+        @keyframes off {
+            to {
+                stroke-dashoffset: 70;
+            }
+        }
+
+        .svg3 {
+            transform: rotate(-80deg);
+            stroke-dasharray: 300;
+            stroke-dashoffset: 250;
+            animation: offset 5s linear forwards;
+            margin-left: 3%;
+            margin-top: -124%
+        }
+
+        @keyframes offset {
+            to {
+                stroke-dashoffset: 120;
+            }
+        }
+
+        .svg4 {
+            transform: rotate(-80deg);
+            stroke-dasharray: 300;
+            stroke-dashoffset: 250;
+            animation: offset1 5s linear forwards;
+            margin-left: 3%;
+            margin-top: -124%
+        }
+
+        @keyframes offset1 {
+            to {
+                stroke-dashoffset: 160;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            background-color: white;
+            margin-left: 2%;
+            margin-right: 2%;
+            border-bottom: 4px solid aqua
+        }
+
+        .sp1 {
+            position: absolute;
+            ;
+            left: 7%;
+            top: 58%;
+        }
+
+        .sp2 {
+            position: absolute;
+            ;
+            left: 33%;
+            top: 57%;
+        }
+
+        .sp3 {
+            position: absolute;
+            ;
+            left: 58%;
+            top: 58%;
+        }
+
+        .sp4 {
+            position: absolute;
+            ;
+            left: 83%;
+            top: 58%;
+        }
+
+        p {
+            margin-left: 2%;
+            font-size: 20px;
+            display: inline-block
+        }
+
+        .p1 {
+            display: inline-block;
+            margin-left: 16%
+        }
+
+        .p2 {
+            display: inline-block;
+            margin-left: 15%
+        }
+
+        .p3 {
+            display: inline-block;
+            margin-left: 14%
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            My Skills
+        </h1>
+
+       <!-- first circle -->
+        <div class="div1">
+            <svg height="300" width="300" class="svg1">
+                <circle cx=70 cy=70 r=65 stroke=aqua stroke-width=6 fill=white></circle>
+            </svg>
+        </div>
+        <!-- second circle -->
+
+        <div class="div2">
+            <svg height="300" width="300" class="svg2">
+                <circle cx=70 cy=70 r=65 stroke=red stroke-width=6 fill=white></circle>
+            </svg>
+        </div>
+
+        <!-- third circle -->
+        <div class="div3">
+            <svg height="300" width="300" class="svg3">
+                <circle cx=70 cy=70 r=65 stroke=orangered stroke-width=6 fill=white></circle>
+            </svg>
+        </div>
+        <!-- fourth circle -->
+        <div class="div4">
+            <svg height="300" width="300" class="svg4">
+                <circle cx=70 cy=70 r=65 stroke=yellowgreen stroke-width=6 fill=white></circle>
+            </svg>
+        </div>
+        <span class="sp1"><b>70%</b></span>
+        <span class="sp2"><b>65%</b></span>
+        <span class="sp3"><b>50%</b></span>
+        <span class="sp4"><b>40%</b></span>
+        <p><b>captaincy skills</b></p>
+        <p class="p1"><b>managing skills</b></p>
+        <p class="p2"><b>communication skills</b></p>
+        <p class="p3"><b>overall skills</b></p>
+
+
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to change a paragraph font size,color,weight
+    Author     : Srikanth S
+    Start Date : 21/11/19
+    End Date   : 21/11/19
+    ***************************************************************************-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="p1">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam magni magnam soluta excepturi
+            dolorem tempora cumque eaque nihil voluptatum, accusamus tenetur blanditiis illum, doloribus
+            atque sapiente exercitationem laboriosam quo officia?Accusamus, dolorum aliquam obcaecati mollitia
+            ipsam veniam quam saepe veritatis omnis asperiores perspiciatis totam eveniet!
+            Cum numquam dolore repudiandae modi odio? Ipsum nobis corporis esse accusantium quisquam quo voluptas
+            doloribus?
+        </p><br>
+    </div>
+    <button onclick="font()">change font</button>
+    <button onclick="imag()">border image</button>
+    <script>
+        function font() {
+            //assigning paragraph to x
+            var x = document.getElementById("p1")
+            //creating styles
+            x.style.color = "blue"
+            x.style.fontSize = "20px"
+            x.style.fontWeight = "bold"
+        }
+        function imag() {
+            var x = document.getElementById("p1");
+            x.style.border="2px solid red"
+            x.style.borderImage = "url('dhoni.jpg') 30 30 round";
+        }
+    </script>
+</body>
+
+</html>

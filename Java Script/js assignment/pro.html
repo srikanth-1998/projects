@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,5">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form" onsubmit="subm(this)">
+        <label for="text1">Name:</label>
+        <input type="text" id="text1" name="t1"><br><br>
+        <label for="text2">Category:</label>
+        <select name="category" id="text2" name="t2">
+            <option value="sports">sports</option>
+            <option value="studies">studies</option>
+            <option value="family">family</option>
+            <option value="food">food</option>
+        </select><br><br>
+        <label for="text3" name="t3">Priority:</label>
+        <select name="category" id="text3" name="t3">
+            <option value="high">high</option>
+            <option value="low">low</option>
+            <option value="medium">medium</option>
+        </select><br><br>
+        <label for="text4">Start Date:</label>
+        <input type="date" id="text4" name="t4"><br><br>
+        <label for="text5">End Date:</label>
+        <input type="date" id="text5" name="t5"><br><br>
+        <button>submit</button>
+    </form>
+    <script>
+        function subm(){
+            var uname=document.getElementById("text1")
+            var cat=document.getElementById("text2")
+            var pri=document.getElementById("text3")
+            var sd=document.getElementById("text4")
+            var ed=document.getElementById("text5")
+            alert(cat.value);
+            
+
+            var det={
+                "name":uname.value,
+                "category":cat.value,
+                "Priority":pri.value,
+                "Startdate":sd.value,
+                "Enddate":ed.value
+            };
+           localStorage.setItem("a") 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!------------------------------------------------------------------------------------------------------------------
+create the following responsive web page
+Description : assignment11
+Author      : Srikanth S
+Start Date  : 11/09/2019
+-------------------------------------------------------------------------------------------------------------------->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WSA-assignment11</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .lines {
+            float: right;
+
+            display: none;
+        }
+
+        ul li {
+            display: inline-block;
+            margin-left: 7%;
+            opacity: 0.8;
+        }
+
+        #div1 {
+            display: inline-block;
+        }
+
+        #fir {
+            margin-left: 5%;
+            font-size: 30;
+            font-family: cursive;
+        }
+
+        nav {
+            margin-top: -5%;
+            margin-left: 5%;
+        }
+
+
+        .img2 {
+            width: 32%;
+            height: 350px;
+            float: left;
+            margin-left: 1%
+        }
+
+        .img3 {
+            width: 32%;
+            height: 350px;
+            float: left;
+            margin-left: 1%
+        }
+
+        .img4 {
+            width: 32%;
+            height: 350px;
+            float: left;
+            margin-left: 1%
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .color {
+            color: orange;
+            text-align: center;
+            margin-top: 10%;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 0%
+        }
+
+        #div2 {
+            background-color: white;
+            width: 25%;
+            height: 170px;
+            position: absolute;
+            top: 56%;
+            left: 4%
+        }
+
+        .blur {
+            text-align: center;
+            opacity: 0.6;
+            margin-top: -1%;
+        }
+
+        #div3 {
+            background-color: white;
+            width: 25%;
+            height: 170px;
+            position: absolute;
+            top: 56%;
+            left: 37%;
+        }
+
+        #div4 {
+            background-color: white;
+            width: 25%;
+            height: 170px;
+            position: absolute;
+            top: 56%;
+            left: 71%;
+        }
+       /*media for mobile*/
+        @media only screen and  (max-width:425px) {
+            .sec {
+                display: none;
+            }
+
+            #fir {
+                margin-left: 0%;
+            }
+
+            .lines {
+                display: block;
+                position: absolute;
+                top: 7%;
+                left: 90%;
+            }
+
+            .color {
+                margin-top: 0%;
+            }
+
+            .blur {
+                margin-top: -5%;
+            }
+
+            #div2 {
+                width: 80%;
+                height: 110px;
+                margin-top: 51%;
+                margin-left: 10%;
+            }
+
+            #div3 {
+                width: 80%;
+                height: 110px;
+                margin-top: 150%;
+                margin-left: -24%;
+            }
+
+            #div4 {
+                width: 80%;
+                height: 110px;
+                margin-top: 249%;
+                margin-left: -60%;
+            }
+
+            .img2 {
+                width: 100%;
+                height: 400px;
+            }
+
+            .img3 {
+                width: 100%;
+                height: 400px;
+                margin-top: 5%;
+            }
+
+            .img4 {
+                width: 100%;
+                height: 400px;
+                margin-top: 5%;
+            }
+        }
+       /*media for tablet*/
+        @media only screen and (min-width:426px) and (max-width: 768px) {
+            .sec {
+                display: none;
+            }
+
+            #fir {
+                margin-left: 0%;
+            }
+
+            .lines {
+                display: block;
+                position: absolute;
+                top: 7%;
+                left: 90%;
+            }
+
+            .color {
+                margin-top: 0%;
+            }
+
+            .blur {
+                margin-top: -5%;
+            }
+
+            #div2 {
+                width: 45%;
+                height: 110px;
+                margin-top: 29%;
+                margin-left: -3%;
+                background-color: white;
+            }
+
+            #div3 {
+                width: 50%;
+                height: 110px;
+                margin-top: 29%;
+                margin-left: 10%;
+                background-color: white;
+            }
+
+            #div4 {
+                width: 50%;
+                height: 110px;
+                margin-top: 101%;
+                margin-left: -46%;
+                background-color: white;
+            }
+
+            .img2 {
+                width: 45%;
+                height: 400px;
+                float: left;
+            }
+
+            .img3 {
+                width: 50%;
+                height: 400px;
+                margin-top: 0%;
+            }
+
+            .img4 {
+                width: 50%;
+                height: 400px;
+                margin-top: 20%;
+                margin-left: 25%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="div1">
+        <ul>
+            <li id="fir"><a href="#"><b>Lifeleck</b></a></li>
+        </ul>
+    </div>
+    <nav>
+        <ul>
+            <li class="sec"><a href="#">Home</a></li>
+            <li class="sec"><a href="#">Archieve</a></li>
+            <li class="sec"><a href="#">Category</a></li>
+            <li class="sec"><a href="#">Contact</a></li>
+            <li class="sec"><a href="#">Pages</a></li>
+            <li class="sec"><img src="./social.PNG"> </li>
+           <!--three line-->
+            <li><a class="lines" href="#">&#9776;</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        <!--fir div with block-->
+        <div>
+            <img class="img2" src="./banner_blog_1.png">
+            <div id="div2">
+                <p class="color">Fashion/Life Style</p>
+                <h2>All said replenish years void <br>
+                    kind say void</h2>
+                <p class="blur">Posted on April 15,2019</p>
+            </div>
+        </div>
+        <div>
+            <!--sec div with block-->
+            <img class="img3" src="./banner_blog_2.png">
+            <div id="div3">
+                <p class="color">Fashion/Life Style</p>
+                <h2>All said replenish years void <br>
+                    kind say void</h2>
+                <p class="blur">Posted on April 15,2019</p>
+            </div>
+        </div>
+        <div>
+            <!--third div with block-->
+            <img class="img4" src="./banner_blog_3.png"></div>
+        <div id="div4">
+            <p class="color">Fashion/Life Style</p>
+            <h2>All said replenish years void <br>
+                kind say void</h2>
+            <p class="blur">Posted on April 15,2019</p>
+        </div>
+</body>
+
+</html>

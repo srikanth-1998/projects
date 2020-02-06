@@ -1,0 +1,35 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to write a welcome message for the user
+    Author     : Srikanth S
+    Start Date : 30/10/19
+    End Date   : 30/10/19
+    ***************************************************************************-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WSA-assignment2</title>
+</head>
+<body>
+    <script>
+      var time=prompt("enter the time in hours");
+      if(time>=1&&time<=12){
+          document.write("Good morning!!");
+      }
+      else if(time>=12&&time<=16){
+          document.write("Good Noon!!");
+      }
+      else if(time>=16&&time<=19){
+          document.write("Good Evening!!");
+      }
+      else if(time>=19&&time<=24){
+          document.write("Good Night!!");
+      }
+      else{
+          document.write("enter correct time")
+      }
+    </script>
+</body>
+</html>

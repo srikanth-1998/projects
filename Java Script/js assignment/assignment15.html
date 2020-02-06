@@ -1,0 +1,49 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to generate a pin number;
+    Author     : Srikanth S
+    Start Date : 19/11/19
+    End Date   : 19/11/19
+    ***************************************************************************-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        debugger;
+        var n = +(prompt("enter a number"));
+        var a = [];
+        var flag = 1;
+        var res = 0;
+        a[0] = ran();
+        function ran() {
+            return Math.floor(Math.random() * 10)
+        }
+        for (let i = 1; i < n; i++) {
+            while (flag == 1) {
+                res = ran()
+                for (j = 0; j < i; j++) {
+                    if (a[j] == res) {
+                        flag = 1;
+                        break;
+                    }
+                    else {
+                        flag = 0
+                    }
+                }
+            }
+            a[i] = res;
+            flag = 1
+        }
+        document.write(a)
+      
+    </script>
+</body>
+
+</html>

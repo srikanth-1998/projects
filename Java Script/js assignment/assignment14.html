@@ -1,0 +1,37 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to find a fibonacci series of n using recurrsion
+    Author     : Srikanth S
+    Start Date : 6/11/19
+    End Date   : 7/11/19
+    ***************************************************************************-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var n = +(prompt("enter a number"));
+        //using recurrsion
+        var fib = function (x) {
+
+            if (x <= 1) {
+                return x;
+            }
+            else {
+                return fib(x - 1) + fib(x - 2);
+            }
+        }
+        for (let j = 0; j < n; j++) {
+            document.write(fib(j) + "<br>");
+        }
+
+    </script>
+</body>
+
+</html>

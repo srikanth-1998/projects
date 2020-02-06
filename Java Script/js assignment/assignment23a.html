@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var str=prompt("enter the string");
+       var pos=prompt("enter the position to delete");
+       var ch=prompt("enter number of characters to delete")
+      var str1=str.split("");
+      //to remove specified number of characters will use splice
+      var  res=str1.splice(pos,ch);
+      //joins the remaining string
+      var r=str1.join("");
+      document.write(r)
+    </script>
+</body>
+</html>

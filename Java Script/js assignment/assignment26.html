@@ -1,0 +1,30 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to count number of vowels in a string
+    Author     : Srikanth S
+    Start Date : 18/11/19
+    End Date   : 18/11/19
+    ***************************************************************************-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var str1=prompt("enter the string")
+       document.write(str1+"<br>");
+       var count=0;
+       //spliting str by each character
+       var res=str1.split("");
+       for(let i=0;i<res.length;i++){
+           //counting number of vowel
+           if(res[i]=="a"||res[i]=="e"||res[i]=="i"||res[i]=="o"||res[i]=="u"||res[i]=="A"||res[i]=="E"||res[i]=="I"||res[i]=="O"||res[i]=="U"){
+                count=count+1;                  
+           }
+       }
+       document.write("number of vowels are: "+count)
+    </script>
+</body>
+</html>

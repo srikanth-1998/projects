@@ -1,0 +1,31 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to find a largest string
+    Author     : Srikanth S
+    Start Date : 18/11/19
+    End Date   : 18/11/19
+    ***************************************************************************-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var str1=prompt("enter the string");
+       //spliting string by each characters
+       var str2=str1.split(" ");
+       var large=str2[0];//assigning 1st string as large
+       for(let i=0;i<str2.length;i++){
+          if(large.length<str2[i].length){ 
+              large=str2[i];
+          }
+         else if(large.length==str2[i].length){ 
+              large=str2[i];
+          }
+       }
+       document.write(large)
+    </script>
+</body>
+</html>

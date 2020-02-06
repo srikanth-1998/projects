@@ -1,0 +1,27 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to fetch the values
+    Author     : Srikanth S
+    Start Date : 21/11/19
+    End Date   : 21/11/19
+    ***************************************************************************-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <link id="p1" rel="stylesheet" href="https://www.google.com" hreflang="en-us" type="text/html" target="_self">
+    <script>
+        //assigning link to a
+       var a=document.getElementById("p1")
+       //fetching the values of attributes in link tag
+       document.write("the value of the rel attribute of the link is: "+a.rel)
+       document.write("<br>the value of the href attribute of the link is: "+a.href)
+       document.write("<br>the value of the type attribute of the link is: "+a.type)
+       document.write("<br>the value of the hreflang attribute of the link is: "+a.hreflang)
+       document.write("<br>the value of the target attribute of the link is: "+a.target)
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!-- *****************************************************************************
+    Description: write a javascript programto calculate the perimeter of a land;
+    Author     : Srikanth S
+    Start Date : 26/11/19
+    End Date   : 26/11/19
+    ***************************************************************************-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var arr = [[0, 1, 0, 0], [1, 1, 1, 0], [0, 1, 0, 0], [1, 1, 0, 0]];
+        var arr = []
+        var n = prompt("enter the length")
+        var ns = prompt("enter the size of array elements")
+        for (var i = 0; i < n; i++) {//prompting the values 
+            arr[i] = []
+            for (var j = 0; j < ns; j++) {
+                arr[i][j] = prompt("enter the array elements");
+            }
+        }
+        //checking for number of ones
+        var res = 0;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] == 1) {
+                    res = res + 4
+                }
+            }
+        }
+        //checking for consectives ones
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < (arr[i].length - 1); j++) {
+                if (arr[i][j] == 1 && arr[i][j + 1] == 1) {
+                    res = res - 2
+                }
+            }
+        }
+        //checking for ones in the row wise
+        for (let i = 0; i < arr.length - 1; i++) {
+            for (let j = 0; j < (arr[i].length - 1); j++) {
+                if (arr[i][j] == 1 && arr[i + 1][j] == 1) {
+                    res = res - 2
+                }
+            }
+        }
+        document.write(res)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to get number of days in a year
+    Author     : Srikanth S
+    Start Date : 5/11/19
+    End Date   : 5/11/19
+    ***************************************************************************-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var n=+(prompt("enter year"));
+       if(n%400==0||(n%100!=0&&n%4==0)){
+           document.write("it has 366 days")
+       }
+       else{
+           document.write("it has 365 days")
+       }
+    </script>
+</body>
+</html>

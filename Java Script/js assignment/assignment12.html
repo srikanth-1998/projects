@@ -1,0 +1,31 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to convert string into uppercase or lowercase
+    Author     : Srikanth S
+    Start Date : 12/11/19
+    End Date   : 12/11/19
+    ***************************************************************************-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var str1=prompt("enter the string");
+         str2=str1.split("");
+            for(let i=0;i<str2.length;i++){
+                if(str2[i]===str2[i].toUpperCase()){
+                    //converts to lowercase
+                document.write(str2[i].toLowerCase());
+            } 
+            else{
+                //converts to uppercase
+               document.write(str2[i].toUpperCase());
+            }
+            }
+    </script>
+</body>
+</html>

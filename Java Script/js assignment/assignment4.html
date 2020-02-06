@@ -1,0 +1,43 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to print as shown in output
+    Author     : Srikanth S
+    Start Date : 24/10/19
+    End Date   : 24/10/19
+    ***************************************************************************-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WSA-assignment4</title>
+</head>
+
+<body>
+    <script>
+        var count = 1;
+        for (var i = 1; i < 5; i++) {
+            document.write("<br>");
+            for (var j = 1; j <= i; j++) {
+                document.write(+i);
+            }
+        }
+        // document.write(i);
+        for (var i = 5; i > 0; i--) {
+            document.write("<br>");
+            for (var j = 1; j <= i; j++) {
+                document.write("*");
+            }
+        }
+        for (var i = 1; i < 5; i++) {
+            document.write("<br>");
+            for (var j = 1; j <= i; j++) {
+
+                document.write(+count);
+                count++;
+            }
+        }
+    </script>
+</body>
+
+</html>

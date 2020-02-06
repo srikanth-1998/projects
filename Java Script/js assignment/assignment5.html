@@ -1,0 +1,40 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to find gross salary
+    Author     : Srikanth S
+    Start Date : 23/10/19
+    End Date   : 23/10/19
+    ***************************************************************************-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WSA-assignment5</title>
+</head>
+
+<body>
+  <script>
+    var i = 1;
+    for (i = 1; i <= 100; i++) {
+      //   divisible by both 3 and 5
+      if (i % 3 == 0 && i % 5 == 0) {
+        document.write("<br>fizzbuzz");
+      }
+      //   divisible by 3
+      else if (i % 3 == 0) {
+        document.write("<br>fizz");
+      }
+      //divisible by 5
+      else if (i % 5 == 0) {
+        document.write("<br>buzz");
+      }
+      //  if number is not divisible by both 3 and 5
+      else {
+        document.write("<br>" + i);
+      }
+    }
+  </script>
+</body>
+
+</html>

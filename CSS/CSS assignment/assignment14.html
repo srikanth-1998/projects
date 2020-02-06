@@ -1,0 +1,779 @@
+<!------------------------------------------------------------------------------------------------------------------
+create the following dashboard using grid and flex
+Description : assignment14
+Author      : Srikanth S
+Start Date  : 19/09/2019
+-------------------------------------------------------------------------------------------------------------------->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WSA-assignment14</title>
+    <style>
+        *{
+          color:gray;  
+        }
+        
+        nav{
+            margin-top:-2.2%;
+            margin-left: 10%;
+        }
+        .hide{
+            display:none;
+        }
+        .navimg {
+            width: 2%;
+            margin-left: 2%;
+        }
+
+        .te {
+            margin-left: 3%;
+        }
+
+        .navimg1 {
+            width: 2%;
+        }
+
+        .navimg2 {
+            width: 2%;
+            margin-left: 2%
+        }
+
+        .drop1 {
+            margin-left: 30%;
+            opacity: 0.5;
+        }
+
+        .drop2 {
+            margin-left: 1%;
+        }
+
+        .sp {
+            margin-left: 2%;
+            opacity: 0.5;
+        }
+
+        .conflex {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1%;
+        }
+
+        .img1 {
+            width: 10%;
+            display: inline-block;
+            margin-top: 1%;
+            margin-left: 3%;
+            opacity:0.5;
+        }
+
+        .div1 {
+            background-color: black;
+            /* width: 30%; */
+            display: inline-block;
+        }
+
+        .sp1 {
+            /* color: white; */
+            position: absolute;
+            left: 6%;
+            top: 8%;
+            font-size: 20px;
+        }
+
+        .sp2 {
+            /* color: white; */
+            position: absolute;
+            left: 6%;
+            top: 19%;
+            font-size: 20px;
+        }
+
+        .sp3 {
+            /* color: white; */
+            position: absolute;
+            left: 6%;
+            top: 29%;
+            font-size: 20px;
+        }
+
+        .sp4 {
+            /* color: white; */
+            position: absolute;
+            left: 6%;
+            top: 40%;
+            font-size: 20px;
+        }
+
+        .b1 {
+            background-color: green;
+            color: white;
+            margin-left: 70%;
+
+        }
+
+        .b2 {
+            background-color: red;
+            color: white;
+            margin-left: 70%;
+
+        }
+
+        .div2 {
+            background-color: black;
+            /* width: 30%; */
+            display: inline-block;
+            margin-top: 1%;
+        }
+
+        .sp5 {
+            /* color: white; */
+            position: absolute;
+            left: 6%;
+            top: 55%;
+            font-size: 20px;
+        }
+
+        .sp6 {
+            /* color: white; */
+            position: absolute;
+            left: 6%;
+            top: 65%;
+            font-size: 20px;
+        }
+
+        .sp7 {
+            /* color: white; */
+            position: absolute;
+            left: 6%;
+            top: 75%;
+            font-size: 20px;
+        }
+
+        .sp8 {
+            /* color: white; */
+            position: absolute;
+            left: 6%;
+            top: 87%;
+            font-size: 20px;
+        }
+
+        .sp9 {
+            /* color: white; */
+            position: absolute;
+            left: 6%;
+            top: 95%;
+            font-size: 20px;
+        }
+
+        .div3 {
+            background-color: black;
+            /* width: 30%; */
+            display: inline-block;
+            margin-top: 1%;
+        }
+
+        .sp10 {
+            /* color: white; */
+            position: absolute;
+            left: 6%;
+            top: 103%;
+            font-size: 20px;
+        }
+
+        .simg {
+            margin-left: 68%;
+            width: 10%;
+            display: inline-block;
+            margin-top: 1%;
+        }
+
+        .sp11 {
+            /* color: white; */
+            position: absolute;
+            left: 6%;
+            top: 114%;
+            font-size: 20px;
+        }
+
+        .grid1 {
+            display: grid;
+            grid-template-columns: 30% 1fr;
+            grid-gap: 10px 20px;
+            /* margin-top: 2%; */
+            background-color: rgb(228, 222, 222);
+            height:1750px;
+        }
+
+        .grid2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px 10px;
+            grid-auto-rows: 180px;
+            margin-top: 0.5%
+        }
+
+        .it1 {
+            grid-row: 1/2;
+            grid-column: 1/2;
+            background-color: white;
+            width:70%;
+        }
+
+        .it2 {
+            grid-row: 1/2;
+            grid-column: 2/3;
+            background-color: white;
+            width:115%;
+            margin-left:-48%;
+        }
+
+        .it3 {
+            grid-row: 1/2;
+            grid-column: 3/4;
+            background-color: white;
+            margin-left: -32%;
+        }
+
+        .it4 {
+            grid-row: 4/5;
+            grid-column: 1/4;
+            background-color:white;
+            height: 420px
+        }
+
+        .it5 {
+            grid-row: 6/7;
+            grid-column: 1/4;
+            background-color: white;
+            margin-top: 5%;
+            height: 660px;
+        }
+
+        .grid3 {
+            display: grid;
+            grid-template-columns: repeat(4, 46.3%);
+            grid-gap: 20px 10px;
+            grid-auto-rows: 160px;
+        }
+
+        .its1 {
+            grid-row: 1/2;
+            grid-column: 1/2;
+            background-color: white;
+        }
+
+        .its2 {
+            grid-row: 1/2;
+            grid-column: 2/3;
+            background-color: white;
+        }
+
+        .its3 {
+            grid-row: 1/2;
+            grid-column: 3/4;
+            background-color: white;
+        }
+
+        .its4 {
+            grid-row: 2/3;
+            grid-column: 1/2;
+            background-color: white;
+        }
+
+        .its5 {
+            grid-row: 2/3;
+            grid-column: 2/3;
+            background-color:white;
+        }
+
+        .its6 {
+            grid-row: 2/3;
+            grid-column: 3/4;
+            background-color: white;
+        }
+
+        .its7 {
+            grid-row: 1/3;
+            grid-column: 4/5;
+            background-color: white;
+            height: 390px;
+            width: 175%;
+        }
+
+        .img2 {
+            width: 94%;
+            margin-left: 3%;
+            height: 350px;
+            background-color: white;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            padding: 0px 10px;
+        }
+
+        .table1 {
+            border: 1px black solid;
+            border-collapse: collapse;
+            width: 100%;
+            height: 500px;
+            margin-top: 2%;
+            padding: 1%
+        }
+        .pe{
+            
+    position: relative;
+    top: -46px;
+    left: 300px;
+        }
+    
+
+        tr:nth-child(odd) {
+            background: rgb(204, 191, 191);
+        }
+
+        tr:nth-child(even) {
+            background: white;
+        }
+
+        .col {
+            width: 100%;
+            background-color: rgb(214, 209, 209);
+            height: 15px;
+            border-radius: 10px;
+            margin-top:-20px;
+        }
+
+        .blue {
+            background: blue;
+            height: 100%;
+            width: 70%;
+            border-radius: 10px;
+        }
+
+        .green {
+            background: green;
+            height: 100%;
+            width: 60%;
+            border-radius: 10px;
+        }
+
+        .orange {
+            background: orange;
+            height: 100%;
+            width: 50%;
+            border-radius: 10px;
+        }
+
+        .red {
+            background: red;
+            height: 100%;
+            width: 80%;
+            border-radius: 10px;
+        }
+        .center{
+            margin-top: 10%;
+            margin-left: 42%;
+        }
+        .center1{
+            text-align: center;
+        }
+        .p1{
+            margin-left: 3%;
+            background-color: rgb(241, 234, 234);
+            height: 30px;
+            font-size:25px;
+            margin:0%;
+        }
+        .he{
+            background-color: rgb(241, 234, 234);
+            margin-left: 3%; 
+            margin:0%;
+        }
+        div>span:hover{
+            color:white;
+        }
+        .img1:hover{
+            opacity: 1.0;
+        }
+        .grid2>div:hover{
+            
+            filter:grayscale(100%);
+        }
+        
+        @media only screen and (max-width:425px) {
+            nav{
+                display: none;
+            }
+            .grid1{
+                display:inline-block;
+            }
+            .sp1{
+                margin-left: 15%;
+                margin-top:6%;
+            }
+            .sp2{
+                margin-left: 15%;
+                margin-top:15%;
+            }
+            .sp3{
+                margin-left: 15%;
+                margin-top:25%;
+            }
+            .sp4{
+                margin-left: 15%;
+                margin-top:34%;
+            }
+            .sp5{
+                margin-left: 15%;
+                margin-top:45%;
+            }
+            .sp6{
+                margin-left: 15%;
+                margin-top:54%;
+            }
+            .sp7{
+                margin-left: 15%;
+                margin-top:63%;
+            }
+            .sp8{
+                margin-left: 15%;
+                margin-top:73%;
+            }
+            .sp9{
+                margin-left: 15%;
+                margin-top:81%;
+            }
+            .sp10{
+                margin-left: 15%;
+                margin-top:88%;
+            }
+            .sp11{
+                margin-left: 15%;
+                margin-top:97%;
+                /* width:150%; */
+            }
+            .grid2{
+                display: inline-block;
+                margin-top: 3%;
+            }
+            .it1{
+                width:100%;
+            }
+            .it2{
+                width:100%;
+                margin-left: 0%;
+            }
+            .it3{
+                width: 100%;
+                margin-left: 0%;
+            }
+            .it4{
+                width:100%;
+            }
+            .it5{
+                width: 100%;
+            }
+            .grid3{
+                display:inline-block;
+                width:100%;
+            }
+            .its7{
+                width:99%;
+            }           
+            .center1{
+                margin-left: -10%
+            }
+            .he{
+                background-color: white;
+            }
+            .p1{
+                background-color: white;
+            }
+            .flex{
+                display: inline-block;
+                width:100%;
+            }
+            .fl{
+                float:left;
+            }
+            .box{
+                width:30%;
+            }
+            .fl1{
+                margin-left: 50%;
+            }
+            .hide{
+                display: block;
+                margin-left: 90%;
+                margin-top:-4.7%;
+            }
+            
+            body{
+                width:100%;
+                height:2500px;
+                background-color:rgb(241, 234, 234);
+            }
+            .pe{
+                margin-left: 10%;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    
+        <span class="sp0"><b>Admin</b></span><span class="hide">&#9776;</span>
+        <nav>
+        <img class="navimg" src="./iconmonstr-email-4-240.png">
+        <img class="navimg" src="./iconmonstr-eye-7-240 (1).png">
+        <img src="./iconmonstr-chart-4-240.png" class="navimg">
+        <input type="text" class="te">
+        <img src="./search1.png" class="navimg1">
+        <select class="drop1">
+            <option>Dropdown</option>
+            <option>2</option>
+        </select>
+        <span class="sp">Support</span>
+        <img src="./man.PNG" class="navimg2">
+        <select class="drop2">
+            <option></option>
+            <option></option>
+        </select>
+    </nav>
+    <div class="grid1">
+        <div class="conflex">
+
+            <div class="div1">
+                <img src="./iconmonstr-dashboard-5-240.png" class="img1">
+                <span class="sp1">Dashboard</span>
+                <hr>
+                <img src="./news feed.jpg" class="img1">
+                <span class="sp2">News Feed</span><br><br>
+                <img src="./iconmonstr-inbox-3-240.png" class="img1">
+                <span class="sp3">Inbox</span>
+                <button class="b1">11</button>
+                <hr>
+                <img src="./iconmonstr-clipboard-4-240.png" class="img1">
+                <span class="sp4">Tasks</span>
+                <button class="b2">19</button><br><br>
+            </div>
+            <div class="div2">
+                <img src="./b.jpg" class="img1">
+                <span class="sp5">Buttons</span>
+                <hr>
+                <img src="./typography (1).png" class="img1">
+                <span class="sp6">Typography</span>
+                <hr>
+                <img src="./forms.png" class="img1">
+                <span class="sp7">Forms</span>
+                <hr>
+                <img src="./typography (1).png" class="img1">
+                <span class="sp8">Tables</span><br>
+                <img src="./charts.png" class="img1">
+                <span class="sp9">Charts</span>
+            </div>
+            <div class="div3">
+                <img src="./more pages.jpg" class="img1">
+                <span class="sp10">More Pages</span>
+                <img src="./iconmonstr-arrow-65-240.png" class="simg">
+                <hr>
+                <img src="./iconmonstr-log-out-7-240.png" class="img1">
+                <span class="sp11">Logout</span>
+            </div>
+
+        </div>
+
+
+        <div class="grid2">
+            <div class="it1">
+                <img src="./icon1.PNG" alt="" class="center">
+                <h1 class="center1">65%</h1>
+                <h3 class="center1">Growth</h3>
+            </div>
+            <div class="it2">
+                    <img src="./icon2.PNG" alt="" class="center">
+                    <h1 class="center1">15</h1>
+                    <h3 class="center1">New User</h3>
+            </div>
+            <div class="it3">
+                    <img src="./icon3.PNG" alt="" class="center">
+                    <h1 class="center1">15,140</h1>
+                    <h3 class="center1">Profit</h3>
+            </div>
+
+            <div class="grid3">
+                <div class="its1">
+                        <img src="./icon4.PNG" alt="" class="center">
+                        <h2 class="center1">Message</h2>
+                </div>
+                <div class="its2">
+                        <img src="./icon5.PNG" alt="" class="center">
+                        <h2 class="center1">Client</h2>
+                </div>
+                <div class="its3">
+                        <img src="./icon6.PNG" alt="" class="center">
+                        <h2 class="center1">Expenses</h2>
+                </div>
+                <div class="its4">
+                        <img src="./icon7.PNG" alt="" class="center">
+                        <h2 class="center1">Total Sales</h2>
+                </div>
+                <div class="its5">
+                        <img src="./icon8.PNG" alt="" class="center">
+                        <h2 class="center1">Social Feed</h2>
+                </div>
+                <div class="its6">
+                        <img src="./icon9.PNG" alt="" class="center">
+                        <h2 class="center1">Bounce Rate</h2>
+                </div>
+                <div class="its7">
+                    <div>
+                        <h1>Windows 8</h1>
+                        <span class="pe">78%</span>
+                        <div class="col">
+                            <div class="blue"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h1>mac</h1>
+                        <span class="pe">68%</span>
+                        <div class="col">
+                            <div class="green"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h1>Linux</h1>
+                        <span class="pe">58%</span>
+                        <div class="col">
+                            <div class="orange"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h1>iphone</h1>
+                        <span class="pe">85%</span>
+                        <div class="col">
+                            <div class="red"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="it4">
+                <p class="p1">Profit Chart</p>
+                <img src="./graph.PNG" class="img2">
+            </div>
+            <div class="it5">
+
+                <h1 class="he">Data Tables</h1>
+
+                <div class="flex">
+                    <div class="fl">
+                        <span>Show</span><input type="text" class="box">
+                        <span>entries</span>
+                    </div>
+                    <div class="fl1">
+                        <span>Search:</span><input type="text" class="box">
+                    </div>
+                </div>
+                <table border="1" class="table1">
+                    <thead>
+                        <tr>
+                            <td>Rendering Engine</td>
+                            <td>Browser</td>
+                            <td>Platform(s)</td>
+                            <td>Engine version</td>
+                            <td>CSS grade</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gecko</td>
+                            <td>Firefox 1.0</td>
+                            <td>Win 98+ </td>
+                            <td>1.7</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Gecko</td>
+                            <td>Firefox 1.0</td>
+                            <td>Win 98+ </td>
+                            <td>1.7</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Gecko</td>
+                            <td>Firefox 1.0</td>
+                            <td>Win 98+ </td>
+                            <td>1.7</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Gecko</td>
+                            <td>Firefox 1.0</td>
+                            <td>Win 98+ </td>
+                            <td>1.7</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Gecko</td>
+                            <td>Firefox 1.0</td>
+                            <td>Win 98+ </td>
+                            <td>1.7</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Gecko</td>
+                            <td>Firefox 1.0</td>
+                            <td>Win 98+ </td>
+                            <td>1.7</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Gecko</td>
+                            <td>Firefox 1.0</td>
+                            <td>Win 98+ </td>
+                            <td>1.7</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Gecko</td>
+                            <td>Firefox 1.0</td>
+                            <td>Win 98+ </td>
+                            <td>1.7</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Gecko</td>
+                            <td>Firefox 1.0</td>
+                            <td>Win 98+ </td>
+                            <td>1.7</td>
+                            <td>A</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Rendering Engine</td>
+                            <td>Browser</td>
+                            <td>Platform(s)</td>
+                            <td>Engine version</td>
+                            <td>CSS grade</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <footer>
+                    <p>Showing 1 to 10 of 55 entries</p>
+
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

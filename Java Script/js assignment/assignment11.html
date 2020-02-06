@@ -1,0 +1,45 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to display the arnstrong number between 100 to 1000
+    Author     : Srikanth S
+    Start Date : 6/11/19
+    End Date   : 6/11/19
+    ***************************************************************************-->
+
+<!-- *****************************************************************************
+    Description: write a javascript program to get a armstrong number
+    Author     : Srikanth S
+    Start Date : 6/11/19
+    End Date   : 6/11/19
+    ***************************************************************************-->
+
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // var n=+(prompt("enter a number to check whether it is armstrong or not"));
+    // var num=0;
+    
+    for(var i=100;i<1000;i++){
+     var num=0;   
+     var temp=i;
+    while(temp>0){
+        var rem=temp%10;
+        num=num+(rem*rem*rem);
+        temp=parseInt(temp/10);
+    }
+    //to check the armstrong numbers
+    if(i==num){
+        document.write(i+ " <br>");
+    }
+   
+    }
+    document.write(Math.cbrt(0))
+
+    </script>
+</body>
+</html>

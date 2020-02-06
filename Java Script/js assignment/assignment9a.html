@@ -1,0 +1,54 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to convert decimal to binary,hexadecimal and octal
+    Author     : Srikanth S
+    Start Date : 31/10/19
+    End Date   : 4/11/19
+    ***************************************************************************-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WSA-assignment9a</title>
+</head>
+
+<body>
+    <script>
+        var n = +(prompt("enter a number to convert"));
+        var base = +(prompt("enter base"))
+        var res = "";
+        //octahedral//binary//hexadecimal
+        while (n > 0) {
+            var rem = n % base;
+            n = parseInt(n / base);
+            switch (rem) {
+                case 10:
+                    rem = "A";
+                    break;
+                case 11:
+                    rem = "B";
+                    break;
+                case 12:
+                    rem = "C";
+                    break;
+                case 13:
+                    rem = "D";
+                    break;
+                case 14:
+                    rem = "E";
+                    break;
+                case 15:
+                    rem = "F";
+                    break;
+
+            }
+            res = rem + res;
+
+        }
+        document.write(res);
+    </script>
+</body>
+
+</html>

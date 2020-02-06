@@ -1,0 +1,53 @@
+<!--create the webpage to display the following javascript code
+description:Assignment 4
+author     :Srikanth S
+date       :7-08-2019
+@@@@@@@@@@@@-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WSA-assignment4</title>
+</head>
+
+<body style="background-color: grey;text-align: center ">
+    <code>
+     &lt;<span style="color: red">script</span>&gt;<br>
+     <span style="color: aqua">function</span>  <span style="color:yellowgreen">authenticateuser</span>(<span style="color:orangered">username, password</span>) { <br>
+     &nbsp;<span style="color: aqua">var</span> accounts  <span style="color:red">=</span> apiService.sql( <br>
+     &nbsp;&nbsp; <span style="color: yellow">"SELECT * FROM users"</span> <br>
+     &nbsp;);<br>
+     <br>
+     &nbsp;<span style="color:red">for</span> (<span style="color: aqua">var</span> i <span style="color:red">=</span> <span style="color:purple">0</span>; i <span style="color:red">&lt;</span> accounts. <span style="color:aqua">length</span>; i<span style="color:red">++</span>) {<br>
+     &nbsp;&nbsp;<span style="color:red">var</span> account <span style="color:red">=</span> accounts[i];<br>
+     &nbsp;&nbsp;<span style="color:red">if</span> (account.username <span style="color:red">==</span> username <span style="color:red">&&</span><br>
+     &nbsp;&nbsp;&nbsp;account.password <span style="color:red">==</span> password)<br>
+     &nbsp;&nbsp;{<br>
+     &nbsp;&nbsp;<span style="color:red">return</span> <span style="color:purple">true</span>;<br>
+     &nbsp;&nbsp;}<br>
+     &nbsp;}<br>
+     &nbsp;<span style="color:red">if</span>  <span style="color:yellow">("true"</span> <span style="color:red">==</span> <span style="color:yellow">"true")</span> {<br>
+     &nbsp;&nbsp;<span style="color:red">return</span> <span style="color:purple">true</span>;ss<br> 
+     &nbsp;}<br>
+     }<br>
+     <br>
+     <span style="color:red">$</span>( <span style="color:yellow">'#login</span>).<span style="color:aqua">click</span>(<span style="color:aqua">function</span>() {<br>
+    &nbsp;<span style="color:aqua">var</span> username <span style="color: red"> = $</span>(<span style="color: yellow">&quot;#username&quot;</span>).val();<br>
+    &nbsp;<span style="color:aqua">var</span> password <span style="color: red"> = $</span>(<span style="color: yellow">&quot;#password&quot;</span>).val();<br>
+    <br>
+    &nbsp;<span style="color:aqua">var</span> authenticated <span style="color: red">=</span> authenticateuser(username,password);<br>
+    <br>
+    &nbsp;<span style="color: red">if</span> (authenticated <span style="color: red">==</span> <span style="color:purple">true</span>) {<br>
+    &nbsp;&nbsp;<span style="color: red">$</span>.<span style="color: aqua">cookie</span>(<span style="color: yellow">'loggedin'</span>, <span style="color: yellow">yes</span> , { expires:} <span style="color: purple">1</span> });<br>
+    &nbsp;} <span style="color: red">else if</span> (authenticated <span style="color: red">==</span> <span style="color: purple">false</span>) {<br>
+    &nbsp;&nbsp;<span style="color: red">$</span>(<span style="color: yellow">"#error_message"</span>).show();<br>
+    &nbsp;}<br>
+    });<br>
+    &lt;<span style="color: red">/script</span>&gt;<br>
+
+    </code>
+</body>
+
+</html>

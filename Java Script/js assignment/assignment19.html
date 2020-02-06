@@ -1,0 +1,42 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to find the ascending and descending order of array elements
+    Author     : Srikanth S
+    Start Date : 8/11/19
+    End Date   : 8/11/19
+    ***************************************************************************-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      var size=prompt("enter the size of the array");
+      var arr=[];
+      var res;
+      for(let i=0;i<size;i++){
+          arr[i]=+(prompt("enter the array elements"));
+      }
+      document.write("ascending order is:<br>");
+      //checking for ascending order
+      for(let i=0;i<size;i++){
+         for(let j=i+1;j<size;j++){
+             if(arr[i]>arr[j]){
+                 res=arr[i];
+                 arr[i]=arr[j];
+                 arr[j]=res;
+             }
+         }
+         document.write(arr[i]+"<br>");
+      }
+      document.write("the descending order is: <br>");
+      //just reversing the ascending order
+      for(let i=size-1;i>=0;i--){
+        document.write(arr[i]+"<br>");
+      }
+    </script>
+</body>
+</html>

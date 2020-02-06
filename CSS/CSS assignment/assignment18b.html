@@ -1,0 +1,80 @@
+<!------------------------------------------------------------------------------------------------------------------
+create the typewriter using steps
+Description : assignment18b
+Author      : Srikanth S
+Start Date  : 1/10/2019
+-------------------------------------------------------------------------------------------------------------------->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: black;
+            font-family: monospace;
+            font-size: 20px
+        }
+
+        .top {
+            position: absolute;
+            top: 200px;
+            left: 300px;
+            animation: typing 4s steps(35), blink 0.5s infinite alternate;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid gray;
+            color: gray;
+        }
+
+        .bottom {
+            top: 240px;
+            width: 0px;
+            animation: bottomtext 4s steps(25) 4s forwards;
+        }
+
+        @keyframes bottomtext {
+            from {
+                width: 0ch;
+            }
+
+            to {
+                width: 20ch;
+            }
+        }
+
+        @keyframes typing {
+            from {
+                width: 0ch;
+            }
+
+            to {
+                width: 45ch;
+            }
+        }
+
+        @keyframes blink {
+            from {
+                border-color: transparent;
+            }
+
+            to {
+                border-color: gray
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p class="top">Animation typewriter style using css steps()</p>
+    <p class="top bottom">created by Srikanth</p>
+</body>
+
+</html>

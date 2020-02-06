@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str=prompt("enter the string");
+        var str1=str.split(" ");
+        //spliting by space
+        var res;
+        for(let i=0;i<str1.length;i++){
+        //spliting by each character
+         var res=str1[i].split("");
+         //making first letter capital
+         res[0]=res[0].toUpperCase();
+         //joining the letters after capitalizing the first letter
+         var p=res.join("");
+         document.write(p+" ")
+        }
+    </script>
+</body>
+</html>

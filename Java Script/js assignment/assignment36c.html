@@ -1,0 +1,27 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to find area of triangle
+    Author     : Srikanth S
+    Start Date : 21/11/19
+    End Date   : 21/11/19
+    ***************************************************************************-->
+    <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <title>Document</title>
+            </head>
+            <body>
+                <p>area of triangle:<span id="s1"></span></p>
+                <script>
+                   var a=+(prompt("enter the length of a side"));
+                   var b=+(prompt("enter the length of a side"));
+                   var c=+(prompt("enter the length of a side"));
+                   var s=(a+b+c)/2;
+                   //math.sqrt is used to find square root
+                   var res=(Math.sqrt((s*(s-a)*(s-b)*(s-c))))
+                //    document.write("the area of triangle is " +res)
+                document.getElementById("s1").innerHTML=res
+                </script>
+            </body>
+    </html>

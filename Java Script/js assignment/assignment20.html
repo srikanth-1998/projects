@@ -1,0 +1,34 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to pair the array lements and find the sum of minimum values
+    Author     : Srikanth S
+    Start Date : 13/11/19
+    End Date   : 13/11/19
+    ***************************************************************************-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var size=+(prompt("enter the size"));
+       var arr=[];//empty array
+       var res=0;
+       for(let i=0;i<(size*2);i++){
+           arr[i]=+(prompt("enter the array lements"));
+           document.write(arr[i]+" ");//the array lements
+       }
+      for(let i=0;i<(size*2);i=i+2){
+             if(arr[i]<arr[i+1]){  //if first number is less than second number
+                 res=res+arr[i];  //adds first number to res
+             }
+             else{
+                 res=res+arr[i+1]; //else adds second number to res
+             }
+          }
+      document.write("<br>"+res);
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body
+    style="overflow-y: hidden;background-image:linear-gradient(to left, rgb(94, 88, 88), #9ac2f0 5%, rgb(139, 129, 129), #7fa5d1 95%, #2F2727);">
+    <!-- html part -->
+    <img src="./penguin_title.png" style="margin-left: 27%;">
+    <div class="h-75 shadow"
+        style="width:70%;margin-left:15%;background-image:linear-gradient(to right,rgb(179, 179, 223),rgb(139, 201, 139),rgb(226, 142, 142));">
+        <!-- first row -->
+        <div class="row" style="height:150px;">
+            <div class="col-4">
+                <img src="./cloud.png" width="100%" height="50%" onmouseover="question(this.id)" id="img1"
+                    onmouseout="original(this.id)" onclick="imagedis(this.id)" class="imgd">
+            </div>
+            <div class="col-4">
+                <img src="./cloud.png" width="100%" height="50%" onmouseover="question(this.id)" id="img2"
+                    onmouseout="original(this.id)" onclick="imagedis(this.id)" class="imgd">
+            </div>
+            <div class="col-4">
+                <img src="./cloud.png" width="100%" height="50%" onmouseover="question(this.id)" id="img3"
+                    onmouseout="original(this.id)" onclick="imagedis(this.id)" class="imgd">
+            </div>
+        </div>
+        <!-- second row -->
+        <div class="row" style="height:150px;">
+            <div class="col-4">
+                <img src="./cloud.png" width="100%" height="50%" onmouseover="question(this.id)" id="img4"
+                    onmouseout="original(this.id)" onclick="imagedis(this.id)" class="imgd">
+            </div>
+            <div class="col-4">
+                <img src="./cloud.png" width="100%" height="50%" onmouseover="question(this.id)" id="img5"
+                    onmouseout="original(this.id)" onclick="imagedis(this.id)" class="imgd">
+            </div>
+            <div class="col-4">
+                <img src="./cloud.png" width="100%" height="50%" onmouseover="question(this.id)" id="img6"
+                    onmouseout="original(this.id)" onclick="imagedis(this.id)" class="imgd">
+            </div>
+        </div>
+        <!-- third row -->
+        <div class="row" style="height:150px;">
+            <div class="col-4">
+                <img src="./cloud.png" width="100%" height="50%" onmouseover="question(this.id)" id="img7"
+                    onmouseout="original(this.id)" onclick="imagedis(this.id)" class="imgd">
+            </div>
+            <div class="col-4">
+                <img src="./cloud.png" width="100%" height="50%" onmouseover="question(this.id)" id="img8"
+                    onmouseout="original(this.id)" onclick="imagedis(this.id)" class="imgd">
+            </div>
+            <div class="col-4">
+                <img src="./cloud.png" width="100%" height="50%" onmouseover="question(this.id)" id="img9"
+                    onmouseout="original(this.id)" onclick="imagedis(this.id)" class="imgd">
+            </div>
+        </div>
+    </div>
+    <script>
+        // on mouse hove the below  function will be called
+        function question(imgid) {
+            document.getElementById(imgid).src = "mound_hover.png"
+
+        }
+        //on mouse out the below function is called
+        function original(imgId) {
+            document.getElementById(imgId).src = "cloud.png"
+
+        }
+        k = 0
+        //to display images the below function is called
+        function imagedis(imgid) {
+            debugger
+            if (gol[k] == 9) {
+                k = k + 1
+            }
+            document.getElementById(imgid).src = imgArr[gol[k]]
+            if (imgArr[gol[k]] == "yeti.png") {
+                window.location.href = "project2.1.html"
+            }
+            document.getElementById(imgid).onmouseover = "null"
+            document.getElementById(imgid).onmouseout = "null"
+            document.getElementById(imgid).onclick = "null"
+            k = k + 1
+        }
+        var imgArr = ["penguin0.png", "penguin1.png", "penguin2.png", "penguin3.png", "penguin4.png",
+            "penguin5.png", "penguin6.png", "penguin7.png", "yeti.png"]
+        // for a random number
+        function ran() {
+            return Math.floor(Math.random() * 10)
+        }
+        // to get a unique random number
+        function uniq() {
+            var a = [];
+            var flag = 1;
+            var res = 0;
+            a[0] = ran();
+            for (let i = 1; i < 10; i++) {
+                while (flag == 1) {
+                    res = ran()
+                    for (j = 0; j < i; j++) {
+                        if (a[j] == res) {
+                            flag = 1;
+                            break;
+                        }
+                        else {
+                            flag = 0
+                        }
+                    }
+                }
+                a[i] = res;
+                flag = 1
+            }
+            return a;
+        }
+        // calling a uniq function
+        gol = uniq()
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to find grade of a student
+    Author     : Srikanth S
+    Start Date : 24/10/19
+    End Date   : 24/10/19
+    ***************************************************************************-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WSA-assignment3</title>
+</head>
+
+<body>
+    <script>
+        //inputs
+        var sub1 = +(prompt("enter the marks"));
+        var sub2 = +(prompt("enter the marks"));
+        var sub3 = +(prompt("enter the marks"));
+        //computing
+        var total = sub1 + sub2 + sub3;
+        var avg = total / 3;
+        //checking conditions
+        switch (true) {
+            case (avg >= 90 && avg <= 100):
+                document.write("Ex");
+                break;
+            case (avg >= 80 && avg <= 89):
+                document.write("A+");
+                break;
+            case (avg >= 70 && avg <= 79):
+                document.write("A");
+                break;
+            case (avg >= 60 && avg <= 69):
+                document.write("B+");
+                break;
+            case (avg < 59):
+                document.write("Fail");
+                break;
+            default:
+                document.write("enter correct marks");
+        }
+    </script>
+</body>
+
+</html>

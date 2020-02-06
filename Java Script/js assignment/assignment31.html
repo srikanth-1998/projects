@@ -1,0 +1,30 @@
+<!-- *****************************************************************************
+    Description: write a javascript program to find factors of a number
+    Author     : Srikanth S
+    Start Date : 19/11/19
+    End Date   : 19/11/19
+    ***************************************************************************-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var n=+(prompt("enter a number")) 
+       //empty string
+       var res=" "
+       for(let i=1;i<=n;i++){
+           //if rem is zero then it is a factor
+           if(n%i==0){
+           res=res+" "+i
+           }
+       }  
+       //calling object using key
+       document.write("the factors of:" +n+ "<br>")
+       document.write(res)   
+    </script>
+</body>
+</html>

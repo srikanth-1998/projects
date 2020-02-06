@@ -1,0 +1,307 @@
+<!------------------------------------------------------------------------------------------------------------------
+create the marksheet shown below using proper css property like position, table,opacity
+Description : assignment10
+Author      : Srikanth S
+Start Date  : 9/09/2019
+-------------------------------------------------------------------------------------------------------------------->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WSA-assignment10</title>
+    <style>
+        #head {
+            text-align: center;
+            opacity: 0.7;
+            margin-top: 7%
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: -1%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: -1%;
+            opacity: 0.9;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .sp {
+            margin-left: 3%;
+        }
+
+        .sp1 {
+            position: absolute;
+            left: 60%;
+            top: 51%
+        }
+
+        #sp2 {
+            position: absolute;
+            left: 60%;
+            top: 56%
+        }
+
+        #sp3 {
+            position: absolute;
+            left: 65%;
+            top: 13%;
+        }
+
+        #div1 {
+            margin-left: 5%;
+            width: 90%;
+            border: 8px double black;
+            background-color: rgb(236, 203, 148);
+            height: 1000px;
+        }
+
+        #div2 {
+            background-color: white;
+            width: 20%;
+            height: 80px;
+            margin-left: 3%;
+            margin-top: 12%;
+            float: left;
+        }
+
+        #div3 {
+            background-color: white;
+            width: 67%;
+            height: 80px;
+            margin-left: 3%;
+            float: left;
+            margin-top: 12%;
+        }
+
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin-left: 3%;
+            width: 90%;
+        }
+
+        .img1 {
+            margin-top: 5%;
+            width: 100%;
+            height: 50px;
+        }
+
+        #barc {
+            position: relative;
+            top: -1%
+        }
+
+        #img2 {
+            /* width:100%; */
+            height: 50px;
+            margin-left: 2%;
+        }
+
+        #img3 {
+            height: 50px;
+            margin-left: 35%;
+        }
+
+        #img4 {
+            height: 50px;
+            margin-left: 30%;
+        }
+
+        #fir {
+            width: 14%;
+            display: inline-block;
+            position: absolute;
+            top: 7%;
+            background-color: rgb(236, 203, 148);
+            left: 8.4%;
+        }
+
+        .note {
+            position: relative;
+            top: 23%;
+            left: -90%;
+        }
+
+        td {
+            text-align: center
+        }
+
+        .left {
+            text-align: left;
+        }
+
+        #red {
+            color: rgb(29, 16, 16);
+            border: 0px solid rgb(22, 14, 14);
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="div1">
+        <img id="fir" src="logo.jpg">
+        <!-- used to insert a logo -->
+        <span id="sp3"><b>SL. NO.: &nbsp;&nbsp;&nbsp;<span id="red">13437205</span></b></span>
+        <h1 id="head">DR.BHIMARAO AMBEDKAR UNIVERSITY,AGRA</h1>
+        <h2>(FORMERLY-AGRA UNIVERSITY)</h2>
+        <h1>MARKSHEET</h1>
+        <p><b>STATEMENT OF MARKS : Bachelor Of Arts (B.A) Part-I</b></p>
+        <p><b><u>Examination-2013</u></b></p>
+        <span class="sp"><b>Roll No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :
+                7892694017</b></span><br><br>
+        <span class="sp"><b>Name Of The Candidate : K.SADHANA SINGH</b></span><br><br>
+        <span class="sp"><b>Father's
+                Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;: SATPAL SINGH</b></span><br><br>
+        <span class="sp"><b>College/Centre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;: 352-PRAKASH MAHAVIDYALAYA P.A.C ROAD ETAH</b></span> <br>
+        <span class="sp1"><b>Enrol No :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A-1234567</b></span>
+        <span id="sp2"><b>Category :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Regular</b></span><br>
+        <table border="1">
+            <tr>
+                <!--first row-->
+                <th class="left" rowspan="2">Name Of Subjects</th>
+                <!--rowspan used to combine two rows-->
+                <th colspan="6">Marks Obtained<br>Theory Paper</th>
+                <!--colspan used to combine columns-->
+                <th colspan="5">Marks Obtained <br>Practical Paper</th>
+                <th rowspan="2">Total<br>Theory<br>&<br>Practical</th>
+            </tr>
+            <tr>
+                <!--second row-->
+                <th>Max</th>
+                <th>Min</th>
+                <th>I</th>
+                <th>II</th>
+                <th>III</th>
+                <th>Total</th>
+                <th>Max</th>
+                <th>Min</th>
+                <th>I</th>
+                <th>II</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <!--third row-->
+                <td class="left">GEOGRAPHY</td>
+                <td>70</td>
+                <td>25</td>
+                <td>21</td>
+                <td>20</td>
+                <td></td>
+                <td>41</td>
+                <td>30</td>
+                <td>11</td>
+                <td>27</td>
+                <td>--</td>
+                <td>27</td>
+                <td>68</td>
+            </tr>
+            <tr>
+                <!--fourth row-->
+                <td class="left">GENERAL ENGLISH</td>
+                <td>100</td>
+                <td>35</td>
+                <td>23</td>
+                <td>26</td>
+                <td></td>
+                <td>49</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>--</td>
+                <td></td>
+                <td>49</td>
+            </tr>
+            <tr>
+                <!--fifth row-->
+                <td class="left">SOCIOLOGY</td>
+                <td>100</td>
+                <td>35</td>
+                <td>20</td>
+                <td>24</td>
+                <td></td>
+                <td>44</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>--</td>
+                <td></td>
+                <td>44</td>
+            </tr>
+            <tr>
+                <!--sixth row-->
+                <td class="left">HOME SCIENCE</td>
+                <td>70</td>
+                <td>25</td>
+                <td>23</td>
+                <td>20</td>
+                <td></td>
+                <td>43</td>
+                <td>30</td>
+                <td>11</td>
+                <td>26</td>
+                <td>--</td>
+                <td>26</td>
+                <td>69</td>
+            </tr>
+            <tr>
+                <!--seventh row-->
+                <th class="left" rowspan="2" colspan="3">Result : Pass</th>
+                <th class="left" colspan="9">Total of Part-I Year(140/400)</th>
+                <th>230</th>
+            </tr>
+            <tr>
+                <!--eight row-->
+                <th class="left" colspan="9">GRAND TOTAL(140/400)</th>
+                <th>230</th>
+            </tr>
+            <!--another table-->
+        </table> <br><br>
+        <table border="2">
+            <tr>
+                <th class="left">QUALIFYING SUBJECT</th>
+                <th>MARKS</th>
+                <th>RESULT</th>
+            </tr>
+            <tr>
+                <td class="left">ENVIRONMENTAL STUDIES</td>
+                <td>25</td>
+                <td>CLEAR</td>
+            </tr>
+            <tr>
+                <td class="left">RASTRA GAURAV</td>
+                <td></td>
+                <td>NOT CLEAR</td>
+            </tr>
+        </table>
+        <!--barcode-->
+        <div id="div2">
+            <img class="img1" src="./barcode.jpg">
+            <span id="barc">Date&nbsp;&nbsp;&nbsp;15-09-2013</span>
+        </div>
+        <!--signature-->
+        <div id="div3">
+            <img id="img2" src="sign 1.png">
+            <img id="img3" src="sign 2.jpg">
+            <img id="img4" src="sign 3.jpg">
+            <pre><span>PREPARED BY:</span>                                        <span>CHECKED BY:</span>                                   <span>REGISTRAR</span>
+        </div>
+ <pre class="note">Note: In case of any discrepancy   between  the entries  in the marksheet  issued & in the University  record, is the University record shall be final.</pre>
+
+        </div>
+</body>
+
+</html>
